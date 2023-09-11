@@ -27,7 +27,11 @@ your changes does not take up a lot of space.
 The main branch is sacred, and should never be edited directly. What if you mess everything up and the game doesn't work?
 That's why we work on a working copy of the main branch. This branch is entirely separate from the main branch
 which allows us to work without any worry of messing with the perfect, sacred main branch. 
-This branch is named after a pokemon, I go by the number of branches. So if we've been through 4 branches,
+
+When you create a new branch, be sure to publish that branch. If not published, that branch only exists on your local computer. 
+Not in the cloud where others can view and edit. 
+
+New branches is named after a pokemon, I go by the number of branches. So if we've been through 4 branches,
  then the fifth branch will be Wartortle as Charmeleon's number in the national pokedex is five. 
 When you've made a great change and it does not break the game. You push your changes to that branch.
 After, you want to make a pull request.
