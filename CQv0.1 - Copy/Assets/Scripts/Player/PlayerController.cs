@@ -18,23 +18,34 @@ public class PlayerController : MonoBehaviour
     public SwordAttack swordAttack;
     public GunAttack gunAttack;
 
+
+
     Vector2 movementInput;
     Vector2 direction;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
-    Animator animator; 
+    Animator animator;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
     bool canMove = true;
     public bool isInteracting = false;
+
+    //might not need canShoot bool but you never know.  
+    private bool canShoot = true;
+    private float reloadTime = 1.0f;
+    private int maxAmmo = 10;
+    private int currentAmmo;
+    private bool isReloading = false;
+    private float fireRate = .5f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentAmmo = maxAmmo;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // ROTATION SCRIPT
         Vector3 rotationAnchorPosition = rotationAnchor.transform.position;
@@ -49,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (canMove) // check if movement has been turned off
         {
 
-            if (movementInput != Vector2.zero)  
+            if (movementInput != Vector2.zero)
             {
                 bool success = TryMove(movementInput); // try to move in the direction the player inputs
 
@@ -84,6 +95,62 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("isMovingRight", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingLeft", false);
             }
+        }
+
+
+       /* //shooting logic
+        if (reloadTime ==  0.0f)
+        {
+            canShoot == true;
+        }
+        else
+        {
+            canShoot = false;
+
+        }*/
+
+        if (currentAmmo == 0)
+        {
+            canShoot = false;
+
+        }
+        if (isReloading)
+        {
+            // If reloading, count down the reload time.
+            canShoot = false;
+            reloadTime -= Time.deltaTime;
+            print("Reloading");
+          
+
+            // If the reload time is complete, finish reloading.
+            if (reloadTime <= 0)
+            {
+                FinishReloading();
+              
+            }
+        }
+        else
+        {
+            // Check for user input to reload the gun.
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
+            }
+        }
+
+        if (canShoot && Input.GetMouseButtonDown(0))
+        {
+            //OnFire();
+            gunAttack.Attack();
+            currentAmmo--;
+            print("Shots Fired");
+           // canShoot == false;
+
+            //Trying to get the gun to fire when prerequisite conditions are fulfilled. 
+        }
+        else
+        {
+            //return;
         }
     }
 
@@ -120,12 +187,42 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
-    void OnFire()
+void Reload()
+{
+    // Check if the gun is already full.
+    if (currentAmmo == maxAmmo)
     {
-        gunAttack.Attack();
-        OnGunAttack?.Invoke();
+        // Gun is already full, no need to reload.
+        return;
     }
-    void OnMelee()
+
+    // Start the reloading process.
+    isReloading = true;
+    reloadTime = 1.0f;  // Reset the reload time.
+
+    // You can add visual and audio effects for reloading here.
+
+    // Simulate the reload time.
+    // For a real game, you'd play an animation or perform other actions.
+    // For this example, we just wait for the reload time.
+}
+
+void FinishReloading()
+{
+    // Calculate how much ammo to add to reach the maximum capacity.
+    int ammoToAdd = maxAmmo - currentAmmo;
+
+    // Add the ammo and clamp it to the maximum capacity.
+    currentAmmo += ammoToAdd;
+    currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+
+    // Reset the reloading flag.
+    isReloading = false;
+        canShoot = true;
+    }
+
+
+void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
