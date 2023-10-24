@@ -28,6 +28,12 @@ public class PlayerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
     bool canMove = true;
     public bool isInteracting = false;
+    
+    //dodgeroll variables.
+    float dodgeCoolDownTime = 1.4f;
+    public float dodgeDuration = 0.5f;
+    public float dodgeForce = 10.0f;
+    private bool canDodge = true;
 
     //might not need canShoot bool but you never know.  
     private bool canShoot = true;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private int currentAmmo;
     private bool isReloading = false;
     private float fireRate = .5f;
+    private bool isInvincible = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +50,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentAmmo = maxAmmo;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -85,10 +93,12 @@ public class PlayerController : MonoBehaviour
             if (movementInput.y < 0) //moving down
             {
                 animator.SetBool("isMovingDown", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingLeft", false); animator.SetBool("isMovingRight", false);
-            } else if (movementInput.y > 0) //moving up
+            }
+            else if (movementInput.y > 0) //moving up
             {
                 animator.SetBool("isMovingUp", true); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingLeft", false); animator.SetBool("isMovingRight", false);
-            } else if (movementInput.x < 0) //moving left
+            }
+            else if (movementInput.x < 0) //moving left
             {
                 animator.SetBool("isMovingLeft", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingRight", false);
             } else if (movementInput.x > 0) //moving right
@@ -108,6 +118,13 @@ public class PlayerController : MonoBehaviour
             canShoot = false;
 
         }*/
+       //if the player hits space while they are able to move they can perform a dodge roll
+       if (canDodge && Input.GetKeyDown(KeyCode.Space))
+        {
+          
+        DodgeRoll();
+        }
+
 
         if (currentAmmo == 0)
         {
@@ -192,7 +209,8 @@ void Reload()
     // Check if the gun is already full.
     if (currentAmmo == maxAmmo)
     {
-        // Gun is already full, no need to reload.
+            // Gun is already full, no need to reload.
+            Debug.Log("Ammo count is full");
         return;
     }
 
@@ -221,8 +239,34 @@ void FinishReloading()
         canShoot = true;
     }
 
+void DodgeRoll()
+    {
+        //what the dodge roll actually does
+        //first calculate what direction the player is moving. 
+        
+        canDodge = false;
+        rb.AddForce(movementInput * dodgeForce);
+        spriteRenderer.color = Color.blue;
+        Debug.Log("A dodgeroll was performed");
 
-void OnMelee()
+        
+        StartCoroutine(StartDodgeCooldown());
+        //play animation for dodge roll
+        // animator.SetBool("dodge", true);
+    }
+
+    IEnumerator StartDodgeCooldown() 
+    {
+        yield return new WaitForSeconds(dodgeCoolDownTime);
+
+        //Reset status to pre roll, this includes invinciblity and color change
+        Debug.Log("Dodgeroll is finished");
+        canDodge = true;
+        spriteRenderer.color = Color.white;
+
+    }
+ 
+        void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
@@ -272,3 +316,4 @@ void OnMelee()
         canMove = true;
     }
 }
+    

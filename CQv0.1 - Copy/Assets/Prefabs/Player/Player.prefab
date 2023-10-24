@@ -383,6 +383,8 @@ MonoBehaviour:
   swordAttack: {fileID: 0}
   gunAttack: {fileID: 0}
   isInteracting: 0
+  dodgeDuration: 0.5
+  dodgeForce: 10
 --- !u!114 &-3381235161327335050
 MonoBehaviour:
   m_ObjectHideFlags: 0
