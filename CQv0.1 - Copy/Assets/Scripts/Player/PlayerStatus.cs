@@ -11,6 +11,7 @@ public class PlayerStatus : MonoBehaviour
 
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
+    public bool isInvincible = false;
 
     public float maxHealth = 12;
     
@@ -36,6 +37,18 @@ public class PlayerStatus : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public void EnableInvinciblity()
+    {
+        isInvincible = true;
+    }
+    public void DisableInvinciblity() 
+    {
+        isInvincible = false;
+    }
+    public bool IsInvincible() 
+    {
+        return isInvincible;
+     }
     public void PlayerTakeDamage(int damage)
     {
         Health -= damage;
