@@ -34,13 +34,21 @@ public class PlayerStatus : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
     }
 
     public void PlayerTakeDamage(int damage)
     {
+        if (!playerController.isInvincible)
+        {
         Health -= damage;
         OnPlayerDamaged?.Invoke();
         StartCoroutine(PlayerFlashColor(Color.red));
+        }
+        else
+        {
+            ////
+        }
     }
 
     public void Defeated()

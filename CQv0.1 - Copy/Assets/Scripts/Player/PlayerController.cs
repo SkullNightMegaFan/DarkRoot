@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     
     //dodgeroll variables.
     float dodgeCoolDownTime = 1.4f;
-    public float dodgeDuration = 0.5f;
+    public float dodgeDuration = 5.0f;
     public float dodgeForce = 10.0f;
     private bool canDodge = true;
 
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     private int currentAmmo;
     private bool isReloading = false;
     private float fireRate = .5f;
-    private bool isInvincible = false;
+    public bool isInvincible = false;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         direction = mousePosition - rotationAnchorPosition;  // find vector toward mouse
 
         float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
-        transform.eulerAngles = new Vector3(0, 0, angle);   // set the object’s Z rotation to the angle value
+        transform.eulerAngles = new Vector3(0, 0, angle);   // set the objectï¿½s Z rotation to the angle value
 
 
         //if movement input is not 0, try to move
@@ -239,24 +239,38 @@ void FinishReloading()
         canShoot = true;
     }
 
+
 void DodgeRoll()
     {
         //what the dodge roll actually does
         //first calculate what direction the player is moving. 
         
         canDodge = false;
+        isInvincible = true;
         rb.AddForce(movementInput * dodgeForce);
         spriteRenderer.color = Color.blue;
         Debug.Log("A dodgeroll was performed");
 
-        
-        StartCoroutine(StartDodgeCooldown());
+        //dodge duration
+        StartCoroutine(DodgeDuration());
+        //need length of time for dodgeroll
+
+       // StartCoroutine(StartDodgeCooldown());
+
         //play animation for dodge roll
         // animator.SetBool("dodge", true);
     }
 
+    IEnumerator DodgeDuration()
+    {
+        yield return new WaitForSeconds(dodgeDuration);
+        StartCoroutine(StartDodgeCooldown());
+    }
     IEnumerator StartDodgeCooldown() 
     {
+        //The player is no longer invincible and is cooling down from dodging
+        spriteRenderer.color = Color.yellow;
+        isInvincible = false;
         yield return new WaitForSeconds(dodgeCoolDownTime);
 
         //Reset status to pre roll, this includes invinciblity and color change
