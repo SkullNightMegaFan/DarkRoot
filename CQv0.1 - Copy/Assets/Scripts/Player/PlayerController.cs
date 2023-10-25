@@ -18,7 +18,18 @@ public class PlayerController : MonoBehaviour
     public SwordAttack swordAttack;
     public GunAttack gunAttack;
 
+    public GameObject burrowPointPrefab;  // Prefab for burrow point object.
+ 
+    public float burrowMaxDuration = 10.0f;  // Duration of burrowing.
+    public float burrowConsumption = 2.0f;  // Resource consumption rate.
+    public float teleportCooldown = 3.0f;  // Cooldown for using saved location.
 
+    private GameObject burrowPoint;  // Reference to the burrow point object.
+    private Transform playerTransform;  // Reference to the player's transform.
+    private Vector2 savedLocation;  // Location to save for teleportation.
+    public float burrowMeter = 5.0f;
+    private float teleportCooldownTimer;  // Timer for teleport cooldown.
+    private bool isBurrowing;  // Flag to check if the player is burrowing.
 
     Vector2 movementInput;
     Vector2 direction;
@@ -28,12 +39,16 @@ public class PlayerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
     bool canMove = true;
     public bool isInteracting = false;
-    
+
+    public PlayerStatus playerState;
+
     //dodgeroll variables.
     float dodgeCoolDownTime = 1.4f;
     public float dodgeDuration = 0.5f;
     public float dodgeForce = 10.0f;
     private bool canDodge = true;
+
+    //burrowing
 
     //might not need canShoot bool but you never know.  
     private bool canShoot = true;
@@ -42,7 +57,7 @@ public class PlayerController : MonoBehaviour
     private int currentAmmo;
     private bool isReloading = false;
     private float fireRate = .5f;
-    private bool isInvincible = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -51,17 +66,35 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         currentAmmo = maxAmmo;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        playerState = GetComponent<PlayerStatus>();
     }
 
     private void Update()
     {
+        // if (playerState.isInvincible)
+        // {
+
+        // }
+        if (Input.GetButton("Burrow") && burrowMeter > 0)
+        {
+            Debug.Log("Burrow Initiated");
+            spriteRenderer.color = Color.green;
+              HandleBurrowing();
+            //spriteRenderer.color += new Color (0,0,0,150);
+        }
+        else 
+        {
+            //////////
+        }
+
         // ROTATION SCRIPT
         Vector3 rotationAnchorPosition = rotationAnchor.transform.position;
         Vector3 mousePosition = mouseBehaviour.mousePosition;
         direction = mousePosition - rotationAnchorPosition;  // find vector toward mouse
 
         float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
-        transform.eulerAngles = new Vector3(0, 0, angle);   // set the object’s Z rotation to the angle value
+        transform.eulerAngles = new Vector3(0, 0, angle);   // set the objectï¿½s Z rotation to the angle value
 
 
         //if movement input is not 0, try to move
@@ -204,7 +237,7 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
-void Reload()
+    void Reload()
 {
     // Check if the gun is already full.
     if (currentAmmo == maxAmmo)
@@ -225,7 +258,7 @@ void Reload()
     // For this example, we just wait for the reload time.
 }
 
-void FinishReloading()
+    void FinishReloading()
 {
     // Calculate how much ammo to add to reach the maximum capacity.
     int ammoToAdd = maxAmmo - currentAmmo;
@@ -239,7 +272,7 @@ void FinishReloading()
         canShoot = true;
     }
 
-void DodgeRoll()
+    void DodgeRoll()
     {
         //what the dodge roll actually does
         //first calculate what direction the player is moving. 
@@ -255,7 +288,7 @@ void DodgeRoll()
         // animator.SetBool("dodge", true);
     }
 
-    IEnumerator StartDodgeCooldown() 
+        IEnumerator StartDodgeCooldown() 
     {
         yield return new WaitForSeconds(dodgeCoolDownTime);
 
@@ -266,7 +299,60 @@ void DodgeRoll()
 
     }
  
-        void OnMelee()
+    void HandleBurrowing()
+    {
+        if (burrowMeter <= 0 || Input.GetButton("Burrow"))
+        {
+            Resurface();
+        }
+        else
+        {
+            //burrowMeter gets drained as a result of time. 
+            burrowMeter -= burrowConsumption * Time.deltaTime;
+
+            //burrow location becomes when the player initially burrows
+            //playerTransform.position = burrowPoint.position;
+            //player is invincible while burrowing.
+            playerState.isInvincible = true;
+            //player is semi transparent while burrowing
+            // spriteRenderer.color -= new Color (0,0,0,150);
+            //character can move under objects.(need to change the canMove to adjust
+            //or just make separate, canBurrow bool
+            
+        }
+    }
+    void Resurface()
+    {
+        isBurrowing = false;
+        playerState.isInvincible = false;
+
+        
+        //player saves their current location and later is able to interact with it to return to burrowPoint
+      //  savedLocation = playerTransform.position;
+
+        //reset the burrowing meter. in full game this will be a specific cooldown
+      //  burrowMeter = burrowMaxDuration;
+
+    }
+
+   void CreateBurrowPoint()
+    {
+        if (!isBurrowing)
+        {
+            // Create a burrow point.
+            burrowPoint = Instantiate(burrowPointPrefab, playerTransform.position, Quaternion.identity);
+
+            // Set the player to burrowing mode.
+            isBurrowing = true;
+
+            // Enable invincibility.
+            playerState.isInvincible = true;
+
+            //player returns to full opacity
+            /////////////////////
+        }
+    }
+    void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
