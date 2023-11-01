@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &852181406398164040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7949073388906839230}
+  m_Layer: 6
+  m_Name: BurrowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7949073388906839230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852181406398164040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8515507410793055184}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685117205898853262
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +63,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8361897719282354984
 SpriteRenderer:
@@ -187,7 +218,7 @@ Transform:
   - {fileID: 7451839081447702450}
   - {fileID: 2779878287690605654}
   m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8167218830748254232
 GameObject:
@@ -261,6 +292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3705950480178343399}
+  - {fileID: 7949073388906839230}
   - {fileID: 6991082388977749426}
   - {fileID: 6140684291539936683}
   - {fileID: 496578296614697388}
@@ -382,7 +414,13 @@ MonoBehaviour:
     maxNormalAngle: 0
   swordAttack: {fileID: 0}
   gunAttack: {fileID: 0}
+  burrowPointPrefab: {fileID: 0}
+  burrowDuration: 10
+  burrowConsumption: 2
+  teleportCooldown: 3
+  burrowMeter: 5
   isInteracting: 0
+  playerState: {fileID: -3381235161327335050}
   dodgeDuration: 0.5
   dodgeForce: 3000
 --- !u!114 &-3381235161327335050
@@ -398,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 8515507410793055185}
+  isInvincible: 0
   maxHealth: 12
   health: 12
 --- !u!114 &5553936556663135760
@@ -742,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6548551208087339848, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6548551208087339848, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_LocalPosition.x
