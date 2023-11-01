@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
     //might not need canShoot bool but you never know.  
     private bool canShoot = true;
     private float reloadTime = 1.0f;
-    private int maxAmmo = 10;
-    private int currentAmmo;
+    public int maxAmmo = 6;
+    public int currentAmmo;
     private bool isReloading = false;
     private float fireRate = .5f;
     public bool isInvincible = false;
@@ -130,6 +130,10 @@ public class PlayerController : MonoBehaviour
         {
             canShoot = false;
 
+        }
+        else if (currentAmmo > 0)
+        {
+            canShoot = true;
         }
         if (isReloading)
         {

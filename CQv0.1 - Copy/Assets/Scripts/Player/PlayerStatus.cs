@@ -19,18 +19,18 @@ public class PlayerStatus : MonoBehaviour
     {
         set
         {
-            health = value;
-            if (health <= 0)
+            playerHealth = value;
+            if (playerHealth <= 0)
             {
                 Defeated();
             }
         }
         get
         {
-            return health;
+            return playerHealth;
         }
     }
-    public float health = 12;
+    public float playerHealth = 12;
 
     private void Start()
     {
