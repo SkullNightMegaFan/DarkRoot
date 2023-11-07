@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
+    PlayerInventory playerInventory;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
     bool canMove = true;
     public bool isInteracting = false;
@@ -51,8 +52,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         currentAmmo = maxAmmo;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerInventory = GetComponent<PlayerInventory>();
     }
-
     private void Update()
     {
         // ROTATION SCRIPT
@@ -107,17 +108,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
-       /* //shooting logic
-        if (reloadTime ==  0.0f)
-        {
-            canShoot == true;
-        }
-        else
-        {
-            canShoot = false;
-
-        }*/
        //if the player hits space while they are able to move they can perform a dodge roll
        if (canDodge && Input.GetKeyDown(KeyCode.Space))
         {
@@ -135,6 +125,8 @@ public class PlayerController : MonoBehaviour
         {
             canShoot = true;
         }
+
+
         if (isReloading)
         {
             // If reloading, count down the reload time.
@@ -202,7 +194,9 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
+    /////////////
+    ////////////
+///ned to create bool for TryBurrow. needs to be similar but have a different set of obstacles that the player can and cannot pass through
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
@@ -217,9 +211,14 @@ void Reload()
             Debug.Log("Ammo count is full");
         return;
     }
+    else if (playerInventory.playerPistolAmmo == 0)
 
-    // Start the reloading process.
+{
+    Debug.Log("Out of ammo, young bunnaroo");
+    return;
+}    // Start the reloading process.
     isReloading = true;
+    //look into making a variable rest into it's initialized value. 
     reloadTime = 1.0f;  // Reset the reload time.
 
     // You can add visual and audio effects for reloading here.
@@ -232,11 +231,30 @@ void Reload()
 void FinishReloading()
 {
     // Calculate how much ammo to add to reach the maximum capacity.
-    int ammoToAdd = maxAmmo - currentAmmo;
+    //need to add logic where player can reload with half ammo and max out at maxAmmo 
+    //instead of being able to go over clip capacity.
+    int ammoToAdd;
+    if (playerInventory.playerPistolAmmo >= maxAmmo)
+    {
+        //might be double equal
+        ammoToAdd = maxAmmo;
+        playerInventory.playerPistolAmmo = playerInventory.playerPistolAmmo - maxAmmo;
+        //Debug.Log()
+    } 
+    else 
+    {
+        ammoToAdd = playerInventory.playerPistolAmmo;
+        playerInventory.playerPistolAmmo =  playerInventory.playerPistolAmmo - playerInventory.playerPistolAmmo;
+    }
 
     // Add the ammo and clamp it to the maximum capacity.
     currentAmmo += ammoToAdd;
     currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+    if (currentAmmo > maxAmmo)
+    {
+        currentAmmo = maxAmmo;
+    }
+  
 
     // Reset the reloading flag.
     isReloading = false;

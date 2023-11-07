@@ -8,10 +8,10 @@ public class AmmoPickUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController playerController = other.GetComponent<PlayerController>();
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
            
            
-            playerController.currentAmmo += 6;
+            playerInventory.playerPistolAmmo += 6;
             Debug.Log("Ammo has been reestored");
             Destroy(gameObject);
            

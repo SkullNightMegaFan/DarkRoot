@@ -7,6 +7,8 @@ public class PlayerInventory : MonoBehaviour
     public List<ItemBase> ItemList;
     int CurrentItemIndex;
     public int currentSeedCount = 0;
+    //pistolAmmo
+    public int playerPistolAmmo = 0;
 
     void Start()
     {
