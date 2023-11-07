@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     public float dodgeDuration = 5.0f;
     public float dodgeForce = 10.0f;
     private bool canDodge = true;
+    //debug not going to set canBurrow in full game
+    private bool canBurrow = true;
 
     //might not need canShoot bool but you never know.  
     private bool canShoot = true;
@@ -45,14 +47,21 @@ public class PlayerController : MonoBehaviour
     private float fireRate = .5f;
     public bool isInvincible = false;
 
+    //burrowVariables
+    public float burrowMeter;
+    public float maxBurrowMeter = 10.0f;
+    public bool isBurrowing;
+    Vector2 introBurrowPoint;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        currentAmmo = maxAmmo;
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerInventory = GetComponent<PlayerInventory>();
+        currentAmmo = maxAmmo;
+        burrowMeter = maxBurrowMeter;
+
     }
     private void Update()
     {
@@ -109,11 +118,39 @@ public class PlayerController : MonoBehaviour
         }
 
        //if the player hits space while they are able to move they can perform a dodge roll
-       if (canDodge && Input.GetKeyDown(KeyCode.Space))
-        {
-          
-        DodgeRoll();
+        if (canDodge && Input.GetKeyDown(KeyCode.Space))
+        {  
+            DodgeRoll();
         }
+        //if player can burrow and is inputting the burrow button, they will be able to burrow. 
+        if (canBurrow && Input.GetButton("Burrow"))
+        {
+            Debug.Log("Burrow is activated");
+            isBurrowing = true;
+            Burrow();
+            //isBurrowing = true;
+           // spriteRenderer.color = Color.green;
+        //    if (isBurrowing)
+        //    {
+        //     Debug.Log("Player is exiting the burrow.");
+        //     isBurrowing = false;
+        //    }
+        }
+        // if (isBurrowing)
+        // {
+
+        //     Burrow();
+        // }
+        if (burrowMeter > 0)
+        {
+            canBurrow = true;
+        }
+        else 
+        {
+            canBurrow = false;
+        }
+
+
 
 
         if (currentAmmo == 0)
@@ -151,6 +188,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //if the player presses the shoot button and can shoot
         if (canShoot && Input.GetMouseButtonDown(0))
         {
             //OnFire();
@@ -165,6 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             //return;
         }
+    
     }
 
     private bool TryMove(Vector2 direction) // Test if a collision prevents movement in either X or Y direction
@@ -274,7 +313,7 @@ void DodgeRoll()
         Debug.Log("A dodgeroll was performed");
 
         //dodge duration
-        StartCoroutine(DodgeDuration());
+        StartCoroutine(DodgeRollDuration());
         //need length of time for dodgeroll
 
        // StartCoroutine(StartDodgeCooldown());
@@ -283,7 +322,7 @@ void DodgeRoll()
         // animator.SetBool("dodge", true);
     }
 
-    IEnumerator DodgeDuration()
+    IEnumerator DodgeRollDuration()
     {
         yield return new WaitForSeconds(dodgeDuration);
         StartCoroutine(StartDodgeCooldown());
@@ -302,6 +341,21 @@ void DodgeRoll()
 
     }
  
+    void Burrow()
+    {
+        /*player becomes invincible, 
+        //the player sprite becomes invisible
+        the point is able 
+        */
+        introBurrowPoint = rb.position;
+        spriteRenderer.color = Color.clear;
+        Debug.Log(introBurrowPoint);
+        //toggle burrow
+        //StartCoroutine()
+
+
+
+    }
         void OnMelee()
     {
         int count = rb.Cast(
