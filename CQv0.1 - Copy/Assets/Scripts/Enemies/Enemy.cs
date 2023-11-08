@@ -22,6 +22,9 @@ public class Enemy : MonoBehaviour
     public int loot = 2;
     public AudioClip damageSound;
     public AudioClip deathSound;
+ /// <summary>
+ /// ///////////////////////////  private int randoLootChance;
+ /// </summary>
     protected internal bool followingPlayer = false;
 
     public float Health
