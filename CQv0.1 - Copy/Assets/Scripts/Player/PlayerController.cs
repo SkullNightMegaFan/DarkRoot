@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     Vector2 direction;
     SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     Animator animator;
     PlayerInventory playerInventory;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
@@ -35,8 +35,7 @@ public class PlayerController : MonoBehaviour
     public float dodgeDuration = 5.0f;
     public float dodgeForce = 10.0f;
     private bool canDodge = true;
-    //debug not going to set canBurrow in full game
-    private bool canBurrow = true;
+   
 
     //might not need canShoot bool but you never know.  
     private bool canShoot = true;
@@ -49,9 +48,20 @@ public class PlayerController : MonoBehaviour
 
     //burrowVariables
     public float burrowMeter;
-    public float maxBurrowMeter = 10.0f;
+    public float maxBurrowMeter = 3.0f;
     public bool isBurrowing;
-    Vector2 introBurrowPoint;
+    public Vector2 introBurrowPoint;
+    public Vector2 exitBurrowPoint;
+    public GameObject IntroBurrow;
+    public GameObject ExitBurrow;
+    //debug not going to set canBurrow in full game
+    
+   // private bool isburrowMeterEmpty;
+    //private bool canBurrow = isburrowMeterEmpty && ;
+    private bool canBurrow = true;
+    private bool canBurrowExit; // = false;
+
+    //need to create a state to track when the player is exiting a burrow.
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +73,7 @@ public class PlayerController : MonoBehaviour
         burrowMeter = maxBurrowMeter;
 
     }
-    private void Update()
+     void Update()
     {
         // ROTATION SCRIPT
         Vector3 rotationAnchorPosition = rotationAnchor.transform.position;
@@ -73,7 +83,8 @@ public class PlayerController : MonoBehaviour
         float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
         transform.eulerAngles = new Vector3(0, 0, angle);   // set the object�s Z rotation to the angle value
 
-
+        //this line of code prevents burrowmeter from surpassing maxBurrowMeter
+        burrowMeter = Mathf.Clamp(burrowMeter, 0, maxBurrowMeter);
         //if movement input is not 0, try to move
         if (canMove) // check if movement has been turned off
         {
@@ -102,7 +113,10 @@ public class PlayerController : MonoBehaviour
 
             if (movementInput.y < 0) //moving down
             {
-                animator.SetBool("isMovingDown", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingLeft", false); animator.SetBool("isMovingRight", false);
+                animator.SetBool("isMovingDown", true);
+                animator.SetBool("isMovingUp", false);
+                animator.SetBool("isMovingLeft", false); 
+                animator.SetBool("isMovingRight", false);
             }
             else if (movementInput.y > 0) //moving up
             {
@@ -122,38 +136,77 @@ public class PlayerController : MonoBehaviour
         {  
             DodgeRoll();
         }
+
+
+
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
         if (canBurrow && Input.GetButton("Burrow"))
         {
-            Debug.Log("Burrow is activated");
-            isBurrowing = true;
-            Burrow();
-            //isBurrowing = true;
-           // spriteRenderer.color = Color.green;
-        //    if (isBurrowing)
-        //    {
-        //     Debug.Log("Player is exiting the burrow.");
-        //     isBurrowing = false;
-        //    }
-        }
-        // if (isBurrowing)
-        // {
+                    //isBurrowing = true;
 
-        //     Burrow();
-        // }
-        if (burrowMeter > 0)
+            canBurrow = false;
+            
+            Burrow();
+            // if (isBurrowing)
+            // {
+            //     BurrowExit();
+            // }
+        }
+        if (Input.GetKeyDown("e"))
         {
-            canBurrow = true;
+            // Debug.Log("Teleportation activated");
+            // rb.position = introBurrowPoint;
+            OnInteract();
+        }
+
+        // if (canBurrowExit && Input.GetButton("Burrow") && isBurrowing)
+        // {
+        //     canBurrowExit = false;
+        //     BurrowExit();
+        // }
+
+
+         if (isBurrowing)
+         {
+            Debug.Log("Currently Burrowing");
+              //player is invincible while burrowing.
+        spriteRenderer.color = Color.clear;
+
+            burrowMeter -= 1 * Time.deltaTime;
+            canBurrowExit = true;
+            
+            //Debug.Log(burrowMeter);
+              if (burrowMeter > 0)
+        {
+           // isburrowMeterEmpty = false;
         }
         else 
         {
-            canBurrow = false;
+            if (isBurrowing)
+            {
+                BurrowExit();
+            }
+            //isBurrowing = false; 
+           // isburrowMeterEmpty = true;
         }
+         }
+         else 
+         {
+            //while player is not burrowing, they recharge their burrowMeter as time passes
+            burrowMeter += 1 * Time.deltaTime;
+
+         }
 
 
 
 
-        if (currentAmmo == 0)
+         //if the burrowMeter is more than zero, the player will be able to burrow
+      
+
+
+
+
+        if (currentAmmo <= 0)
         {
             canShoot = false;
 
@@ -250,8 +303,8 @@ void Reload()
             Debug.Log("Ammo count is full");
         return;
     }
-    else if (playerInventory.playerPistolAmmo == 0)
 
+    else if (playerInventory.playerPistolAmmo == 0)
 {
     Debug.Log("Out of ammo, young bunnaroo");
     return;
@@ -347,14 +400,43 @@ void DodgeRoll()
         //the player sprite becomes invisible
         the point is able 
         */
+        //first the player must destroy the previous burrow's
+        //Probably need to make an if statement if previous 
+        //burrow's exist. But let's get it working first.
+        Debug.Log("New Burrow is activated");
+
+        //destroy previous pairs of burrows
+        Destroy(IntroBurrow);
+        Destroy(ExitBurrow);
+        
+             
+
+        //creating the intro burrow point
         introBurrowPoint = rb.position;
-        spriteRenderer.color = Color.clear;
+        Instantiate(IntroBurrow, introBurrowPoint, Quaternion.identity);
         Debug.Log(introBurrowPoint);
+        StartCoroutine(MiniWait());
+
+        isBurrowing = true;
         //toggle burrow
-        //StartCoroutine()
+       //StartCoroutine()
 
 
 
+    }
+    //when player exits the burrow
+    void BurrowExit()
+    {
+        Debug.Log("Player has exited Burrow");
+
+        exitBurrowPoint = rb.position;
+        Instantiate(ExitBurrow, exitBurrowPoint,Quaternion.identity );
+        spriteRenderer.color = Color.white;
+
+           StartCoroutine(MiniWait());
+
+        isBurrowing = false;
+        
     }
         void OnMelee()
     {
@@ -397,6 +479,11 @@ void DodgeRoll()
         isInteracting = false;
     }
 
+      IEnumerator MiniWait()
+    {
+        yield return new WaitForSeconds(0.1f);
+        //isInteracting = false;
+    }
     public void LockMovement()  //prevents the player from moving
     {
         canMove = false;
