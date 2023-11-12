@@ -1677,7 +1677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.092, y: 0.143, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20820,7 +20820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962212976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.092, y: 0.143, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -102809,9 +102809,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1279285578802206273, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279285578802206273, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279285578802206273, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1432955991994489779, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: damage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610248433493478247, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610248433493478247, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610248433493478247, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1685117205898853262, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_Layer
@@ -102845,6 +102869,14 @@ PrefabInstance:
       propertyPath: rotationAnchor
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4559576734733803020, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881956580223365745, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Name
+      value: burrowParticle
+      objectReference: {fileID: 0}
     - target: {fileID: 5399455150320350164, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_Size.x
       value: 0.1288324
@@ -102861,9 +102893,21 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.029315442
       objectReference: {fileID: 0}
+    - target: {fileID: 5427491636992447123, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: ShapeModule.m_Texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427491636992447123, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: ShapeModule.alignToDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5813565946611087170, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847224135405551423, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5869420963588232572, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: mouseBehaviour
@@ -102897,10 +102941,30 @@ PrefabInstance:
       propertyPath: bulletMoveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7203153591574131265, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203153591574131265, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7596985945054442711, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: mouseBehaviour
       value: 
       objectReference: {fileID: 519420035}
+    - target: {fileID: 7735058926997177188, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Name
+      value: BurrowParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735058926997177188, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7735058926997177188, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7854591609211471403, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -102915,11 +102979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8515507410793055184, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.092
       objectReference: {fileID: 0}
     - target: {fileID: 8515507410793055184, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.143
       objectReference: {fileID: 0}
     - target: {fileID: 8515507410793055184, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: m_LocalPosition.z
@@ -102996,6 +103060,10 @@ PrefabInstance:
     - target: {fileID: 9187664285536811836, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: burrowMeter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187664285536811836, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: currentAmmo
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 9187664285536811836, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: swordAttack
