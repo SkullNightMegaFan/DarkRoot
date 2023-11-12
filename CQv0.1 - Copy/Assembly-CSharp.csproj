@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{24505441-24B2-9455-63F2-4325A0545A82}</ProjectGuid>
+    <ProjectGuid>{23A065AC-1CB7-DA0B-FD24-B6758C78BB7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Inventory\ItemPanelHUD.cs" />
     <Compile Include="Assets\Scripts\UI\UIGameMenu.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Items\AmmoPickUp.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_AI.cs" />
     <Compile Include="Assets\Scripts\UI\UIPauseMenu.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoHandler.cs" />
@@ -75,10 +76,12 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryHUD.cs" />
     <Compile Include="Assets\Scripts\Flocking\Flocker_Loot.cs" />
+    <Compile Include="Assets\Scripts\Items\HealthPickUp.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_GunAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedEnemyAggro.cs" />
     <Compile Include="Assets\Scripts\Enemies\OnEnemyDeath.cs" />
     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Player\BurrowScript.cs" />
     <Compile Include="Assets\Scripts\Flocking\FlockerScript.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoParticle.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -96,10 +99,12 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy Types\Enemy_Slime.cs" />
     <Compile Include="Assets\Scripts\Items\Item_Sword.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_BulletBehaviour.cs" />
+    <Compile Include="Assets\Scripts\YouWinScript.cs" />
     <Compile Include="Assets\Scripts\Attacking\BulletBehaviour.cs" />
     <Compile Include="Assets\Scripts\UI\HealthHeart.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoAimer.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoTarget.cs" />
+    <Compile Include="Assets\Scripts\RotateToMouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -908,15 +913,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{7FF7A976-6F83-A303-2295-62534705A189}</Project>
+      <Project>{AE9CB1C4-041D-829B-BD79-B013DE766F36}</Project>
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{686FF5BD-5F4F-E937-BA77-584A96B00D70}</Project>
+      <Project>{BF35B4E4-E654-A4CD-46B5-C1D27A6FEC1A}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{E819D4B3-CACF-3485-BC1B-E445BC9B0D47}</Project>
+      <Project>{218AE671-0E84-56FF-5237-D184DCA38B6E}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
   </ItemGroup>

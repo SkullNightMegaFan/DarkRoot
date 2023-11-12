@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685117205898853262
 GameObject:
@@ -63,7 +63,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8361897719282354984
 SpriteRenderer:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 0}
---- !u!1 &2766739951754850050
+--- !u!1 &2642684378901896567
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,28 +164,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3705950480178343399}
+  - component: {fileID: 5845871566577674647}
   m_Layer: 6
-  m_Name: RotatePoint
+  m_Name: RotationAnchorSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3705950480178343399
+--- !u!4 &5845871566577674647
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2766739951754850050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001, y: -0.0002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 2642684378901896567}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0005, y: 0.0325, z: 0.90661025}
+  m_LocalScale: {x: -0.05600191, y: -0.09815071, z: -0.058949377}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 0
+  m_Father: {fileID: 496578296614697388}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4559576734733803020
 GameObject:
@@ -196,6 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496578296614697388}
+  - component: {fileID: 7596985945054442711}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -216,10 +217,25 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7451839081447702450}
+  - {fileID: 5845871566577674647}
   - {fileID: 2779878287690605654}
   m_Father: {fileID: 8515507410793055184}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7596985945054442711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559576734733803020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e288ee7731bdf438c268ca8e87e030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAnchor: {fileID: 2642684378901896567}
+  mouseBehaviour: {fileID: 0}
 --- !u!1 &8167218830748254232
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +266,7 @@ Transform:
   m_Children:
   - {fileID: 2794892375652860176}
   m_Father: {fileID: 496578296614697388}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8515507410793055190
 GameObject:
@@ -291,7 +307,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3705950480178343399}
   - {fileID: 7949073388906839230}
   - {fileID: 6991082388977749426}
   - {fileID: 6140684291539936683}
@@ -340,7 +355,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1244965961, guid: 1a0c702548ba4794b8e6e60dee3a9f0c, type: 3}
+  m_Sprite: {fileID: -1694406132, guid: 41fc71d2b11c0e5439523b08f8255d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -393,8 +408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb33f5453e31974f98ead77a7ec7f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseBehaviour: {fileID: 0}
-  rotationAnchor: {fileID: 0}
   moveSpeed: 1
   collisionOffset: 0.02
   swordCollisionOffset: 0.05
@@ -414,15 +427,20 @@ MonoBehaviour:
     maxNormalAngle: 0
   swordAttack: {fileID: 0}
   gunAttack: {fileID: 0}
-  burrowPointPrefab: {fileID: 0}
-  burrowDuration: 10
-  burrowConsumption: 2
-  teleportCooldown: 3
-  burrowMeter: 5
+  rb: {fileID: 0}
   isInteracting: 0
-  playerState: {fileID: -3381235161327335050}
   dodgeDuration: 0.5
   dodgeForce: 3000
+  maxAmmo: 6
+  currentAmmo: 0
+  isInvincible: 0
+  burrowMeter: 5
+  maxBurrowMeter: 3
+  isBurrowing: 0
+  introBurrowPoint: {x: 0, y: 0}
+  exitBurrowPoint: {x: 0, y: 0}
+  IntroBurrow: {fileID: 0}
+  ExitBurrow: {fileID: 0}
 --- !u!114 &-3381235161327335050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +456,7 @@ MonoBehaviour:
   sprite: {fileID: 8515507410793055185}
   isInvincible: 0
   maxHealth: 12
-  health: 12
+  playerHealth: 12
 --- !u!114 &5553936556663135760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemList: []
   currentSeedCount: 0
+  playerPistolAmmo: 0
 --- !u!114 &6158947616810309400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,9 +565,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00093046576, y: 0.0038971454}
-  m_Size: {x: 0.14529876, y: 0.16472286}
-  m_Direction: 0
+  m_Offset: {x: 0.00093046774, y: 0.015751379}
+  m_Size: {x: 0.14529878, y: 0.12921277}
+  m_Direction: 1
 --- !u!95 &2211991588180218902
 Animator:
   serializedVersion: 5
@@ -781,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6548551208087339848, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6548551208087339848, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_LocalPosition.x
