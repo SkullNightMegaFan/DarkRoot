@@ -8,11 +8,9 @@ using System;
 public class PlayerController : MonoBehaviour
 {
     public static event Action OnGunAttack;
-    public MouseBehaviour mouseBehaviour;
-    public GameObject rotationAnchor;
 
     public float moveSpeed = 1f;
-    public float collisionOffset = 0.05f;  //distance from object to check for collision ? how far the ray cast goes
+    public float collisionOffset = 0.04f;  //distance from object to check for collision ? how far the ray cast goes
     public float swordCollisionOffset = 0.06f;  //distance from object to check for collision ? how far the ray cast goes
     public ContactFilter2D movementFilter;  //determines what can collide ?
     public SwordAttack swordAttack;
@@ -75,13 +73,7 @@ public class PlayerController : MonoBehaviour
     }
      void Update()
     {
-        // ROTATION SCRIPT
-        Vector3 rotationAnchorPosition = rotationAnchor.transform.position;
-        Vector3 mousePosition = mouseBehaviour.mousePosition;
-        direction = mousePosition - rotationAnchorPosition;  // find vector toward mouse
-
-        float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
-        transform.eulerAngles = new Vector3(0, 0, angle);   // set the object�s Z rotation to the angle value
+       
 
         //this line of code prevents burrowmeter from surpassing maxBurrowMeter
         burrowMeter = Mathf.Clamp(burrowMeter, 0, maxBurrowMeter);
