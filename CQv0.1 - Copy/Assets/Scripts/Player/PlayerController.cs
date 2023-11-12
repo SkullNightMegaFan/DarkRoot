@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     Vector2 direction;
     SpriteRenderer spriteRenderer;
+    ParticleSystem burrowParticleSystem;
     public Rigidbody2D rb;
     Animator animator;
     PlayerInventory playerInventory;
@@ -52,6 +53,9 @@ public class PlayerController : MonoBehaviour
     public Vector2 exitBurrowPoint;
     public GameObject IntroBurrow;
     public GameObject ExitBurrow;
+    //ideally this should be a list that the player's code reads from
+    //and decides which dirt texture/effect to spawn. 
+    private GameObject burrowParticle;
     //debug not going to set canBurrow in full game
     
    // private bool isburrowMeterEmpty;
@@ -67,8 +71,11 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerInventory = GetComponent<PlayerInventory>();
+        //burrowParticle = GetComponent<ParticleSystem>();
         currentAmmo = maxAmmo;
         burrowMeter = maxBurrowMeter;
+        ///
+        burrowParticleSystem = this.GetComponentInChildren<ParticleSystem>();
 
     }
      void Update()
@@ -160,37 +167,48 @@ public class PlayerController : MonoBehaviour
 
          if (isBurrowing)
          {
+
             Debug.Log("Currently Burrowing");
               //player is invincible while burrowing.
-        spriteRenderer.color = Color.clear;
+            spriteRenderer.color = Color.clear;
+            //!burrowParticleSystem.enabled = burrowParticleSystem.enabled;
+            // burrowParticleSystem.Play();
+            ///////////////////////
+            //!burrowParticle.enabled = burrowParticle.enabled;
+            //burrowParticle.SetActive(true);
+            
+            //later we need to change this so the player creates a dig effect based on 
+            //on the floor beneath them. So if the player is in a snowy area, a snow type
+            //burrow effect should appear, for now we can get away with just spawning in dirt
+            //Instantiate()
 
             burrowMeter -= 1 * Time.deltaTime;
             canBurrowExit = true;
             
             //Debug.Log(burrowMeter);
               if (burrowMeter > 0)
-        {
+             {
            // isburrowMeterEmpty = false;
-        }
-        else 
-        {
+            }
+            else 
+             {
             if (isBurrowing)
             {
                 BurrowExit();
             }
             //isBurrowing = false; 
            // isburrowMeterEmpty = true;
-        }
+             }
          }
          else 
          {
             //while player is not burrowing, they recharge their burrowMeter as time passes
             burrowMeter += 1 * Time.deltaTime;
+            //burrowParticle.enabled = !burrowParticle.enabled;
+           // burrowParticle.SetActive(false);
+
 
          }
-
-
-
 
          //if the burrowMeter is more than zero, the player will be able to burrow
       
@@ -388,6 +406,8 @@ void DodgeRoll()
  
     void Burrow()
     {
+        //starts the particle system when the player burrows
+        burrowParticleSystem.Play();
         /*player becomes invincible, 
         //the player sprite becomes invisible
         the point is able 
@@ -420,7 +440,9 @@ void DodgeRoll()
     void BurrowExit()
     {
         Debug.Log("Player has exited Burrow");
-
+        //update later
+        //stops the particle system
+        burrowParticleSystem.Stop();
         exitBurrowPoint = rb.position;
         Instantiate(ExitBurrow, exitBurrowPoint,Quaternion.identity );
         spriteRenderer.color = Color.white;
