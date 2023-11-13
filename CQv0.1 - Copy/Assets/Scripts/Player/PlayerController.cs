@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
         {
             // Debug.Log("Teleportation activated");
             // rb.position = introBurrowPoint;
+            Debug.Log("The e key has been pressed");
             OnInteract();
         }
 
@@ -418,8 +419,12 @@ void DodgeRoll()
         Debug.Log("New Burrow is activated");
 
         //destroy previous pairs of burrows
-        Destroy(IntroBurrow);
-        Destroy(ExitBurrow);
+        //burrow is no longer being created, the burrow is being created and then immediately destroyed? 
+        //put this in the clean up phase. 
+
+
+        //Destroy(IntroBurrow);
+        //Destroy(ExitBurrow);
         
              
 
@@ -478,6 +483,7 @@ void DodgeRoll()
     {
         if (!isInteracting)
         {
+            Debug.Log("Interacting Void has been activated");
             isInteracting = true;
             StartCoroutine(PlayerInteractEnd());
         }
