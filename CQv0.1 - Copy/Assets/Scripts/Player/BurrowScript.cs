@@ -5,11 +5,12 @@ using UnityEngine;
 public class BurrowScript : MonoBehaviour
 {
     
-   private void OnTriggerEnter2D(Collider2D other)
+   private void OnTriggerStay2D(Collider2D other)
     {
                     PlayerController playerController = other.GetComponent<PlayerController>();
 
-        if (other.CompareTag("Player"))
+    
+        if (other.CompareTag("Player") && playerController.isInteracting)
         {
            Debug.Log("Player has touched the burrow");
            //this line of logic doesn't work well, regardless of if the player 
@@ -20,7 +21,12 @@ public class BurrowScript : MonoBehaviour
             //     playerController.rb.position = playerController.introBurrowPoint;
             // }
             //playerController.rb.position = playerController.introBurrowPoint;
-            other.attachedRigidbody.position = playerController.introBurrowPoint;
+           
+                    
+            other.attachedRigidbody.position = playerController.exitBurrowPoint;
+            //other.attachedRigidbody.position = playerController.introBurrowPoint;
+            
+
           
         }
         else if (other.CompareTag("PlayerProjectiles"))

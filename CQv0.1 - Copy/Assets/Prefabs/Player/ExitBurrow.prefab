@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 4843515235836819370}
   - component: {fileID: 4843515235836819371}
   - component: {fileID: 4843515235836819368}
-  - component: {fileID: -5917598321211948858}
+  - component: {fileID: 4806821329795097021}
   m_Layer: 0
   m_Name: ExitBurrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4843515235836819370
 Transform:
   m_ObjectHideFlags: 0
@@ -47,18 +47,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0040504485, y: 0.0020252168}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.249, y: 0.231}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.3367953, y: 0.32117218}
   m_EdgeRadius: 0
 --- !u!212 &4843515235836819368
 SpriteRenderer:
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1284284676, guid: 304f8f1e10827404983ab81467d1ce6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b62d844feab56ea4dace0816db84969b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5917598321211948858
+--- !u!114 &4806821329795097021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

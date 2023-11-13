@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8746475679872127721}
   - component: {fileID: 8746475679872127718}
   - component: {fileID: 8746475679872127719}
-  - component: {fileID: -3345699046440649485}
+  - component: {fileID: 2140518145312268852}
   m_Layer: 0
   m_Name: IntroBurrow
   m_TagString: Untagged
@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00028932095, y: 0.0052077174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -58,7 +58,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.3234867, y: 0.32290804}
   m_EdgeRadius: 0
 --- !u!212 &8746475679872127719
 SpriteRenderer:
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3345699046440649485
+--- !u!114 &2140518145312268852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
