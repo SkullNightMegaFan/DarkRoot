@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     //burrowVariables
     public float burrowMeter;
     public float maxBurrowMeter = 3.0f;
-    public bool isBurrowing;
+    public bool isBurrowing = false;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
     public GameObject IntroBurrow;
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
      void Update()
     {
        
-
+        
         //this line of code prevents burrowmeter from surpassing maxBurrowMeter
         burrowMeter = Mathf.Clamp(burrowMeter, 0, maxBurrowMeter);
         //if movement input is not 0, try to move
@@ -455,6 +455,9 @@ void DodgeRoll()
            StartCoroutine(MiniWait());
 
         isBurrowing = false;
+        //canburrow is true if the player is not burrowing and burrow meter is above 0.
+        //need to create a new bool variable to have these two flags be true in order for canBurrow to be true 
+        canBurrow = true;
         
     }
         void OnMelee()
@@ -483,26 +486,27 @@ void DodgeRoll()
     {
         if (!isInteracting)
         {
-            Debug.Log("Interacting Void has been activated");
+            Debug.Log("Interacting has been activated");
             isInteracting = true;
             StartCoroutine(PlayerInteractEnd());
         }
         else
         {
-            isInteracting = false;
+            //commented out due to testing reasons.
+           // isInteracting = false;
         }
 
     }
     IEnumerator PlayerInteractEnd()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         isInteracting = false;
     }
 
       IEnumerator MiniWait()
     {
         yield return new WaitForSeconds(0.1f);
-        //isInteracting = false;
+        isInteracting = false;
     }
     public void LockMovement()  //prevents the player from moving
     {

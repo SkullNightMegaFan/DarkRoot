@@ -27,6 +27,6 @@ public class BurrowMeter : MonoBehaviour
        //slider.maxValue = playerController.maxAmmo;
        slider.maxValue = playerController.maxBurrowMeter;
        slider.value = playerController.burrowMeter;
-       Debug.Log(slider.maxValue);
+      // Debug.Log(slider.maxValue);
    }
 }
