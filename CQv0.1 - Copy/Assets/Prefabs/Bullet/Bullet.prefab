@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4619968292148936672}
   m_Layer: 8
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: PlayerProjectiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   bulletMoveSpeed: 4
   damage: 3
   velocity: {x: 0, y: 0}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!70 &6584492084406645450
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
