@@ -28,6 +28,12 @@ public class BulletBehaviour : MonoBehaviour
         //Debug.Log("Collision with " + other.gameObject.name);
         switch (other.gameObject.layer)
         {
+        //bullets die when touching an obstacle.
+        //eventually need to make an exception for a bouncy weapon or something
+        case 3:
+        Destroy(this.gameObject);
+        break;
+        //i want the bullet to collide but not to be destroyed
         case 6:
             //  Player layer: don't collide
             break;
@@ -41,12 +47,12 @@ public class BulletBehaviour : MonoBehaviour
                     enemy.EnemyTakeDamage(damage);
                 }
                 break;
-        case 8:
-                //  Projectiles layer: ignore for now
-                Destroy(this.gameObject);
-                break;
+        // case 8:
+        //         //  Projectiles layer: ignore for now
+        //         Destroy(this.gameObject);
+        //         break;
             default:
-                Destroy(this.gameObject);
+                
                 break;
         }
 
@@ -59,6 +65,6 @@ public class BulletBehaviour : MonoBehaviour
     void Rotate()
     {
         float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
-        transform.eulerAngles = new Vector3(0, 0, angle);   // set the object’s Z rotation to the angle value
+        transform.eulerAngles = new Vector3(0, 0, angle);   // set the objectï¿½s Z rotation to the angle value
     }
 }
