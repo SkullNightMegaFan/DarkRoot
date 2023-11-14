@@ -8,6 +8,17 @@ Every other folder can be deleted. It will be regenerated when you open the proj
 The unity version for this project is 2021.3.17f1, do not under any circumstances change the unity version of the project. 
 All it does is create headache for the programmers. 
 
+Update: I just created a gitignore, it got annoying have to delete a gb and have the project reload every single time. If you want to add a 
+a directory(folder) to the gitignore. just type the name of the folder with this slash afterwards/ and you'll be good to go. you can also 
+have gitignore ignore certain file types or just specific files as well. 
+The links below may help if my explanation is confusing. 
+https://stackoverflow.com/questions/343646/ignoring-directories-in-git-repositories-on-windows
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/#:~:text=The%20types%20of%20files%20you,the%20same%20project%20as%20you.
+
+How to create a gitignore file
+https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+(touch is a gitbash command that literally creates a file.)
 
 How to use git
 
