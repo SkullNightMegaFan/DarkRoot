@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
     private bool canBurrow = true;
     private bool canBurrowExit; // = false;
 
-    //need to create a state to track when the player is exiting a burrow.
-    // Start is called before the first frame update
+    private GameObject clone1;
+    private GameObject clone2;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -141,9 +141,8 @@ public class PlayerController : MonoBehaviour
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
         if (canBurrow && Input.GetButton("Burrow"))
         {
-                    //isBurrowing = true;
 
-            canBurrow = false;
+           // canBurrow = false;
             
             Burrow();
             // if (isBurrowing)
@@ -168,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
          if (isBurrowing)
          {
-
+           
             Debug.Log("Currently Burrowing");
               //player is invincible while burrowing.
             spriteRenderer.color = Color.clear;
@@ -184,7 +183,10 @@ public class PlayerController : MonoBehaviour
             //Instantiate()
 
             burrowMeter -= 1 * Time.deltaTime;
+           // StartCoroutine(MiniWait())
             canBurrowExit = true;
+
+           
             
             //Debug.Log(burrowMeter);
               if (burrowMeter > 0)
@@ -365,7 +367,7 @@ void FinishReloading()
     }
 
 
-void DodgeRoll()
+    void DodgeRoll()
     {
         //what the dodge roll actually does
         //first calculate what direction the player is moving. 
@@ -407,6 +409,7 @@ void DodgeRoll()
  
     void Burrow()
     {
+        canBurrow = false;
         //starts the particle system when the player burrows
         burrowParticleSystem.Play();
         /*player becomes invincible, 
@@ -422,18 +425,20 @@ void DodgeRoll()
         //burrow is no longer being created, the burrow is being created and then immediately destroyed? 
         //put this in the clean up phase. 
 
-
-        //Destroy(IntroBurrow);
-        //Destroy(ExitBurrow);
+        // if there are any intro or exit burrows
+        // then destroy them 
+        Destroy(clone1);
+        Destroy(clone2);
+        //Destroy(ExitBurrow.gameObject);
         
              
 
         //creating the intro burrow point
         introBurrowPoint = rb.position;
-        Instantiate(IntroBurrow, introBurrowPoint, Quaternion.identity);
+        clone1 = Instantiate(IntroBurrow, introBurrowPoint, Quaternion.identity);
         Debug.Log(introBurrowPoint);
         StartCoroutine(MiniWait());
-
+        
         isBurrowing = true;
         //toggle burrow
        //StartCoroutine()
@@ -444,17 +449,18 @@ void DodgeRoll()
     //when player exits the burrow
     void BurrowExit()
     {
+        isBurrowing = false;
         Debug.Log("Player has exited Burrow");
         //update later
         //stops the particle system
         burrowParticleSystem.Stop();
         exitBurrowPoint = rb.position;
-        Instantiate(ExitBurrow, exitBurrowPoint,Quaternion.identity );
+        clone2 = Instantiate(ExitBurrow, exitBurrowPoint,Quaternion.identity );
         spriteRenderer.color = Color.white;
 
            StartCoroutine(MiniWait());
 
-        isBurrowing = false;
+        
         //canburrow is true if the player is not burrowing and burrow meter is above 0.
         //need to create a new bool variable to have these two flags be true in order for canBurrow to be true 
         canBurrow = true;
