@@ -170,13 +170,7 @@ public class PlayerController : MonoBehaviour
            
             Debug.Log("Currently Burrowing");
               //player is invincible while burrowing.
-            spriteRenderer.color = Color.clear;
-            //!burrowParticleSystem.enabled = burrowParticleSystem.enabled;
-            // burrowParticleSystem.Play();
-            ///////////////////////
-            //!burrowParticle.enabled = burrowParticle.enabled;
-            //burrowParticle.SetActive(true);
-            
+            spriteRenderer.color = Color.clear;            
             //later we need to change this so the player creates a dig effect based on 
             //on the floor beneath them. So if the player is in a snowy area, a snow type
             //burrow effect should appear, for now we can get away with just spawning in dirt
@@ -189,13 +183,13 @@ public class PlayerController : MonoBehaviour
            
             
             //Debug.Log(burrowMeter);
-              if (burrowMeter > 0)
+              if (burrowMeter > 0 && Input.GetButton("Burrow"))
              {
            // isburrowMeterEmpty = false;
             }
             else 
              {
-            if (isBurrowing)
+            if (isBurrowing )
             {
                 BurrowExit();
             }
@@ -505,7 +499,7 @@ void FinishReloading()
     }
     IEnumerator PlayerInteractEnd()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.02f);
         isInteracting = false;
     }
 

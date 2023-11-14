@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4843515235836819370}
   - component: {fileID: 4843515235836819371}
   - component: {fileID: 4843515235836819368}
-  - component: {fileID: 4806821329795097021}
+  - component: {fileID: -2741949698039173509}
   m_Layer: 0
   m_Name: ExitBurrow
   m_TagString: Untagged
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4806821329795097021
+--- !u!114 &-2741949698039173509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,6 +121,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4843515235836819369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbae7893dbff9744ad56deb363cef96, type: 3}
+  m_Script: {fileID: 11500000, guid: a08b92388b2bb9b42b368a82e89fd672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
