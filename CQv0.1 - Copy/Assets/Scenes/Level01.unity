@@ -9004,7 +9004,7 @@ CompositeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -104059,6 +104059,10 @@ PrefabInstance:
       propertyPath: swordAttack
       value: 
       objectReference: {fileID: 520656259}
+    - target: {fileID: 9187664285536811836, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
+      propertyPath: isInteracting
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9187664285536811836, guid: 3d9b813fa291f7242afadc36b9bc6c16, type: 3}
       propertyPath: maxBurrowMeter
       value: 3
