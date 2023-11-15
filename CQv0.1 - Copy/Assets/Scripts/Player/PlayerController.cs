@@ -58,8 +58,6 @@ public class PlayerController : MonoBehaviour
     private GameObject burrowParticle;
     //debug not going to set canBurrow in full game
     
-   // private bool isburrowMeterEmpty;
-    //private bool canBurrow = isburrowMeterEmpty && ;
     private bool canBurrow = true;
     private bool canBurrowExit; // = false;
 
@@ -87,19 +85,25 @@ public class PlayerController : MonoBehaviour
         //if movement input is not 0, try to move
         if (canMove) // check if movement has been turned off
         {
-
+            //if the player is moving
             if (movementInput != Vector2.zero)
             {
+                
                 bool success = TryMove(movementInput); // try to move in the direction the player inputs
-
+                
+                //this should be an if, else if statement but for now it's fine.
                 if (!success)  // if movement fails, try to move either only on X or only on Y (allows player to slide around obstacles)
                 {
+
                     success = TryMove(new Vector2(movementInput.x, 0));
+                   
 
                 }
                 if (!success)
                 {
                     success = TryMove(new Vector2(0, movementInput.y));
+
+                  
                 }
                 animator.SetBool("isMoving", success);
             }
@@ -142,27 +146,17 @@ public class PlayerController : MonoBehaviour
         if (canBurrow && Input.GetButton("Burrow"))
         {
 
-           // canBurrow = false;
-            
             Burrow();
-            // if (isBurrowing)
-            // {
-            //     BurrowExit();
-            // }
+
         }
+        //this is the interact key, pretty common in games, if the player presses it
+        //they can interact with interactable objects at the right space at the right time.
         if (Input.GetKeyDown("e"))
         {
-            // Debug.Log("Teleportation activated");
-            // rb.position = introBurrowPoint;
             Debug.Log("The e key has been pressed");
             OnInteract();
         }
 
-        // if (canBurrowExit && Input.GetButton("Burrow") && isBurrowing)
-        // {
-        //     canBurrowExit = false;
-        //     BurrowExit();
-        // }
 
 
          if (isBurrowing)
@@ -175,9 +169,10 @@ public class PlayerController : MonoBehaviour
             //on the floor beneath them. So if the player is in a snowy area, a snow type
             //burrow effect should appear, for now we can get away with just spawning in dirt
             //Instantiate()
-
+            //the player's burrow meter decreases as they burrow
             burrowMeter -= 1 * Time.deltaTime;
            // StartCoroutine(MiniWait())
+           //the player is allowed to exit the burrow. Creating an exit burrow
             canBurrowExit = true;
 
            
@@ -209,9 +204,6 @@ public class PlayerController : MonoBehaviour
 
          //if the burrowMeter is more than zero, the player will be able to burrow
       
-
-
-
 
         if (currentAmmo <= 0)
         {
@@ -276,6 +268,15 @@ public class PlayerController : MonoBehaviour
                 movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
                 castCollisions, // List of collisions to store the found collisions into after the Cast is finished
                 moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
+        
+       
+            // if (isBurrowing == true)
+            // {
+            //     count = 0;
+            //     Physics2D.IgnoreLayerCollision(0,3, true);
+            //     rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime); //position + movement vector * move speed
+
+            // }
 
             if (count == 0) // if there are no collisions, move
             {
@@ -284,8 +285,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+               
                 return false; // movement did not occur
             }
+           
         }
         else
         { // can't move if there's no direction to move in
@@ -293,9 +296,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    /////////////
-    ////////////
-///ned to create bool for TryBurrow. needs to be similar but have a different set of obstacles that the player can and cannot pass through
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
@@ -426,7 +426,6 @@ void FinishReloading()
         //Destroy(ExitBurrow.gameObject);
         
              
-
         //creating the intro burrow point
         introBurrowPoint = rb.position;
         clone1 = Instantiate(IntroBurrow, introBurrowPoint, Quaternion.identity);
@@ -444,6 +443,8 @@ void FinishReloading()
     void BurrowExit()
     {
         isBurrowing = false;
+        Physics2D.IgnoreLayerCollision(0, 3, false);
+
         Debug.Log("Player has exited Burrow");
         //update later
         //stops the particle system
@@ -460,7 +461,7 @@ void FinishReloading()
         canBurrow = true;
         
     }
-        void OnMelee()
+    void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
