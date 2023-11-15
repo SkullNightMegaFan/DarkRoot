@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     //burrowVariables
     public float burrowMeter;
     public float maxBurrowMeter = 3.0f;
-    public bool isBurrowing = false;
+    public bool isBurrowing;// = false;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
     public GameObject IntroBurrow;
@@ -149,6 +149,7 @@ public class PlayerController : MonoBehaviour
             Burrow();
 
         }
+<<<<<<< Updated upstream
         //this is the interact key, pretty common in games, if the player presses it
         //they can interact with interactable objects at the right space at the right time.
         if (Input.GetKeyDown("e"))
@@ -158,6 +159,14 @@ public class PlayerController : MonoBehaviour
         }
 
 
+=======
+        if (Input.GetButton("Interact"))
+        {
+
+            OnInteract();
+        }
+
+>>>>>>> Stashed changes
 
          if (isBurrowing)
          {
@@ -488,13 +497,13 @@ void FinishReloading()
         if (!isInteracting)
         {
             Debug.Log("Interacting has been activated");
-            isInteracting = true;
+            //isInteracting = true;
             StartCoroutine(PlayerInteractEnd());
         }
         else
         {
             //commented out due to testing reasons.
-           // isInteracting = false;
+            isInteracting = false;
         }
 
     }
@@ -507,7 +516,6 @@ void FinishReloading()
       IEnumerator MiniWait()
     {
         yield return new WaitForSeconds(0.1f);
-        isInteracting = false;
     }
     public void LockMovement()  //prevents the player from moving
     {
