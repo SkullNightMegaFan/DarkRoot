@@ -1,0 +1,12 @@
+/* Webfont: RockidsDisplay-Italic */@font-face {
+    font-family: 'RockidsDisplay';
+    src: url('Rockids.eot'); /* IE9 Compat Modes */
+    src: url('Rockids.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Rockids.woff') format('woff'), /* Modern Browsers */
+         url('Rockids.woff2') format('woff2'), /* Modern Browsers */
+         url('Rockids.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
