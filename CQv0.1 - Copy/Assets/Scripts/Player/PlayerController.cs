@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     private float reloadTime = 1.0f;
     public int maxAmmo = 6;
     public int currentAmmo;
-    private bool isReloading = false;
+    public bool isReloading = false;
     private float fireRate = .5f;
     public bool isInvincible = false;
 
@@ -158,7 +158,6 @@ public class PlayerController : MonoBehaviour
          if (isBurrowing)
          {
            
-            Debug.Log("Currently Burrowing");
               //player is invincible while burrowing.
             spriteRenderer.color = Color.clear;            
             //later we need to change this so the player creates a dig effect based on 
@@ -219,7 +218,7 @@ public class PlayerController : MonoBehaviour
             // If reloading, count down the reload time.
             canShoot = false;
             reloadTime -= Time.deltaTime;
-            print("Reloading");
+           // Debug.Log(reloadTime);
           
 
             // If the reload time is complete, finish reloading.
@@ -300,14 +299,16 @@ void Reload()
             Debug.Log("Ammo count is full");
         return;
     }
-
+    //if player ammo is empty, you are unable to reload
+    //need to change this to currentlyequippedgun or a ref variable for it
     else if (playerInventory.playerPistolAmmo == 0)
-{
+    {
     Debug.Log("Out of ammo, young bunnaroo");
     return;
-}    // Start the reloading process.
+    }    // Start the reloading process.
     isReloading = true;
     //look into making a variable rest into it's initialized value. 
+    //value needs to equal currently equipped gun, which it should read from equipped gun.
     reloadTime = 1.0f;  // Reset the reload time.
 
     // You can add visual and audio effects for reloading here.
@@ -317,32 +318,42 @@ void Reload()
     // For this example, we just wait for the reload time.
 }
 
+
 void FinishReloading()
 {
     // Calculate how much ammo to add to reach the maximum capacity.
     //need to add logic where player can reload with half ammo and max out at maxAmmo 
     //instead of being able to go over clip capacity.
     int ammoToAdd;
-    if (playerInventory.playerPistolAmmo >= maxAmmo)
+    //if currently equipped gun is more than max ammo
+    if (playerInventory.playerPistolAmmo > maxAmmo)
     {
         //might be double equal
         ammoToAdd = maxAmmo;
-        playerInventory.playerPistolAmmo = playerInventory.playerPistolAmmo - maxAmmo;
+        playerInventory.playerPistolAmmo -= ammoToAdd;
+
+         currentAmmo += ammoToAdd;
+         // Add the ammo and clamp it to the maximum capacity.
+
+        //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
         //Debug.Log()
     } 
-    else 
+    else //if (playerInventory.playerPistolAmmo =< maxAmmo)
     {
-        ammoToAdd = playerInventory.playerPistolAmmo;
-        playerInventory.playerPistolAmmo =  playerInventory.playerPistolAmmo - playerInventory.playerPistolAmmo;
+        ammoToAdd = (maxAmmo - currentAmmo);
+        playerInventory.playerPistolAmmo -= ammoToAdd;
+
+         currentAmmo += ammoToAdd;
+             // Add the ammo and clamp it to the maximum capacity.
+
+   //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
     }
 
     // Add the ammo and clamp it to the maximum capacity.
-    currentAmmo += ammoToAdd;
-    currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
-    if (currentAmmo > maxAmmo)
-    {
-        currentAmmo = maxAmmo;
-    }
+    // if (currentAmmo > maxAmmo)
+    // {
+    //     currentAmmo = maxAmmo;
+    // }
   
 
     // Reset the reloading flag.

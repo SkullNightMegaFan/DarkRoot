@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b1b44c22fb7acc84281f055e2d84cfe5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rockids Display
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 417138ace58a99342b169b7a83a6d310, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
