@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DodgeRoll",
+                    "type": "Button",
+                    "id": "ef720e82-2322-44f9-8299-cd1684a19ef9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -379,6 +388,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "785a0f0b-2d75-4e53-8d11-e9b21286ec00",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "DodgeRoll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
