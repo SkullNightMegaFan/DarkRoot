@@ -177,6 +177,7 @@ public class PlayerController : MonoBehaviour
             burrowMeter -= 1 * Time.deltaTime;
            // StartCoroutine(MiniWait())
             canBurrowExit = true;
+            //isInvincible = true;
 
            
             
@@ -403,6 +404,7 @@ void FinishReloading()
     private void Burrow()
     {
         canBurrow = false;
+        isInvincible = true;
         //starts the particle system when the player burrows
         burrowParticleSystem.Play();
         /*player becomes invincible, 
@@ -443,6 +445,7 @@ void FinishReloading()
     void BurrowExit()
     {
         isBurrowing = false;
+        isInvincible = false;
         Debug.Log("Player has exited Burrow");
         //update later
         //stops the particle system
