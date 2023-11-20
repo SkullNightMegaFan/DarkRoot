@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     public GunAttack gunAttack;
 
 
-
     Vector2 movementInput;
     Vector2 direction;
     SpriteRenderer spriteRenderer;
@@ -26,18 +25,24 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     PlayerInventory playerInventory;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
-    bool canMove = true;
+    public bool canMove = true;
     public bool isInteracting = false;
     
     //dodgeroll variables.
     float dodgeCoolDownTime = 1.4f;
     public float dodgeDuration = 5.0f;
     public float dodgeForce = 10.0f;
-    private bool canDodge = true;
+    public bool canDodge = true;
+    public bool isTalking = false;
    
-
-    //might not need canShoot bool but you never know.  
-    private bool canShoot = true;
+   //gun variables
+   //this is a reminder but essentially
+   //the script gun attack has all the actual logic to shoot
+   //bullets and so forth. I should use that as a class and create seperate weapons for each object
+   //in the player script I should actually have these variables equal to the equipped gun that the player would read the data from.
+   //I don't have the time to figure out how to get this working. But after graduation, I might take a look. 
+   //this would take far longer than what time allows. So it's getting cancelled for the vertical slice. 
+    public bool canShoot = true;
     private float reloadTime = 1.0f;
     public int maxAmmo = 6;
     public int currentAmmo;
@@ -48,7 +53,7 @@ public class PlayerController : MonoBehaviour
     //burrowVariables
     public float burrowMeter;
     public float maxBurrowMeter = 3.0f;
-    public bool isBurrowing;// = false;
+    public bool isBurrowing;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
     public GameObject IntroBurrow;
@@ -58,9 +63,9 @@ public class PlayerController : MonoBehaviour
     private GameObject burrowParticle;
     //debug not going to set canBurrow in full game
     
-    private bool canBurrow = true;
-    private bool canBurrowExit; // = false;
-
+    public bool canBurrow = true;
+    public bool canBurrowExit; 
+//These are references to the burrows the player can create. 
     private GameObject clone1;
     private GameObject clone2;
     void Start()
@@ -76,7 +81,7 @@ public class PlayerController : MonoBehaviour
         burrowParticleSystem = this.GetComponentInChildren<ParticleSystem>();
 
     }
-     void Update()
+    private void Update()
     {
        
         
@@ -137,24 +142,28 @@ public class PlayerController : MonoBehaviour
 
 
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
-        if (canBurrow && Input.GetButton("Burrow"))
+        if (canBurrow && Input.GetButtonDown("Burrow"))
         {
-
-           // canBurrow = false;
-            
+          
             Burrow();
-            // if (isBurrowing)
-            // {
-            //     BurrowExit();
-            // }
         }
-        if (Input.GetButton("Interact"))
+
+        if (isTalking)
         {
-
-            OnInteract();
+            canBurrow = false;
+            isInvincible = true;
+            isInteracting = false;
+            canDodge = false;
+            canShoot = false;
+            LockMovement();
         }
-
-
+        else 
+        {
+            // UnlockMovement();
+            // canBurrow = true;
+            // isInvincible = false;
+            
+        }
          if (isBurrowing)
          {
            
@@ -197,9 +206,6 @@ public class PlayerController : MonoBehaviour
          }
 
          //if the burrowMeter is more than zero, the player will be able to burrow
-      
-
-
 
 
         if (currentAmmo <= 0)
@@ -209,7 +215,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (currentAmmo > 0)
         {
-            canShoot = true;
+            //canShoot = true;
         }
 
 
@@ -237,20 +243,17 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //if the player presses the shoot button and can shoot
+//I tried getting the new input system to work so this line wouldn't be required but it just doesn't work
+//I was able to add events and bindings but i couldn't get them to pair with an action. Prob just need to watch more
+//unity tutorials but I just wasn't getting it. 
         if (canShoot && Input.GetMouseButtonDown(0))
         {
-            //OnFire();
             gunAttack.Attack();
             currentAmmo--;
-            print("Shots Fired");
-           // canShoot == false;
-
-            //Trying to get the gun to fire when prerequisite conditions are fulfilled. 
         }
         else
         {
-            //return;
+            return;
         }
     
     }
@@ -345,16 +348,11 @@ void FinishReloading()
 
          currentAmmo += ammoToAdd;
              // Add the ammo and clamp it to the maximum capacity.
+    // Add the ammo and clamp it to the maximum capacity.
 
    //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
     }
 
-    // Add the ammo and clamp it to the maximum capacity.
-    // if (currentAmmo > maxAmmo)
-    // {
-    //     currentAmmo = maxAmmo;
-    // }
-  
 
     // Reset the reloading flag.
     isReloading = false;
@@ -402,7 +400,7 @@ void FinishReloading()
 
     }
  
-    void Burrow()
+    private void Burrow()
     {
         canBurrow = false;
         //starts the particle system when the player burrows
@@ -461,7 +459,7 @@ void FinishReloading()
         canBurrow = true;
         
     }
-        void OnMelee()
+       public void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
@@ -483,7 +481,7 @@ void FinishReloading()
 
     }
 
-    void OnInteract()
+   public void OnInteract()
     {
         if (!isInteracting)
         {
@@ -510,10 +508,13 @@ void FinishReloading()
     }
     public void LockMovement()  //prevents the player from moving
     {
+        //Debug.Log("PlayerMovement has been locked");
         canMove = false;
     }
     public void UnlockMovement()  //allows the player to move again
     {
+        //Debug.Log("PlayerMovement has been lunocked");
+
         canMove = true;
     }
 }

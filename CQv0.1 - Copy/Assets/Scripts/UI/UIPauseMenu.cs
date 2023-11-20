@@ -13,6 +13,7 @@ public class UIPauseMenu : MonoBehaviour
 
     void Update()
     {
+        //change this to something with the new input manager. not in the mood to change it now tho.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isGamePaused)
