@@ -20,6 +20,9 @@ public class KnockbackFeedback : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+
+    //shouldn't the amount of knockback be read from the enemy that does damage to the player?
+    //Another thing to add to the list of things to implement post vertical slice. 
     public void Knockback(GameObject sender)
     {
         StopAllCoroutines();
