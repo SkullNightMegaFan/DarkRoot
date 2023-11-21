@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
 
     public GameObject player;
     
+    //add list of all enemies
   
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -20,27 +21,34 @@ public class NPC : MonoBehaviour
         //this works
         if (other.CompareTag("Player"))
         {
-           // PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
              interactCanvas.SetActive(true);
              //will get around to mapping it to the action key
-            if (playerController.isInteracting == true)
+            if (playerController.isInteracting == true && playerController.isTalking == false)
             {
+                //vertical slice implementation
+                    //when the player is talking all enemies OnFlock script should change to teh DoNothing behavior. 
+
                 dialogueCanvas.SetActive(true);
                 
 
                 dialogueText.text = "Press E";
+                //post verticle slice i should just create a dialogue tree coroutine and go from there. 
+                //not sure how i would do that with the return values needed but if there's a will there's a way. 
+                StartCoroutine(MiniWait());
                 //A coroutine will start and then immediately go to the next line of code
                 // it does not need to be finished in order for the next line of code to be fun. 
-                 StartCoroutine(MiniWait());
-                
+                //playerController.Talking();
                // StartCoroutine(MiniWait());
-
                 //eventually this will be using the new input manager system but for now this will do.
                 //in addition, i want the dialogue text, to be read from a txt file. 
               //   if (Input.GetKey(KeyCode.E))
                 
             }   
+            else
+            {
+                //
+            }
           
         }
         else
@@ -48,27 +56,28 @@ public class NPC : MonoBehaviour
             interactCanvas.SetActive(false);
 
         }
-       // if (playerController.isTalking == true)
-        if (playerController.isTalking == true && dialogueCanvas.activeSelf == true)
+
+        if (playerController.isTalking == true  && playerController.isInteracting == true)//dialogueCanvas.activeSelf == true)
+        //if (playerController.isTalking == true && )
         {
              //if (Input.GetKey(KeyCode.Space))
-                             if (Input.GetKey(KeyCode.E))
+                          
+                dialogueText.text = "This is the second dialogue";
+                playerController.StoppedTalking();
+                     
 
-                    {
-                        Debug.Log("We can talk");
-                        dialogueText.text = "This is the second dialogue";
-                    }
+                    
                // else if (Input.GetKeyDown(KeyCode.Space))
-               else if (Input.GetMouseButtonDown(1))
-                {
-                //     dialogueCanvas.SetActive(false);
-                //        playerController.UnlockMovement();
-                //       playerController.canDodge = true;
-                //  playerController.canShoot = true;
-                //  playerController.isInvincible = false;
-                playerController.isTalking = false;
-                Debug.Log("The B has been pressed");
-                }
+            //    else if (Input.GetMouseButtonDown(0))
+            //     {
+            //     //     dialogueCanvas.SetActive(false);
+            //     //        playerController.UnlockMovement();
+            //     //       playerController.canDodge = true;
+            //     //  playerController.canShoot = true;
+            //     //  playerController.isInvincible = false;
+            //     playerController.isTalking = false;
+            //     Debug.Log("The B has been pressed");
+            //     }
         }
     }
 
@@ -77,9 +86,13 @@ public class NPC : MonoBehaviour
                    PlayerController playerController = player.GetComponent<PlayerController>();
 
     yield return new WaitForSeconds(0.3f);
-    playerController.isTalking = true;
-    Debug.Log("The player can continue talking");
+        playerController.Talking();
+
+
     }
+
+
+    
     private void OnTriggerExit2D(Collider2D other)
     
     {
@@ -91,7 +104,9 @@ public class NPC : MonoBehaviour
            //canvas is not being enabled when this line of code
            interactCanvas.SetActive(false);
            dialogueCanvas.SetActive(false);
-
+           //I think this allows player to exit an NPC's interact area and get free dodge cool down. 
+           //Sounds cool i'll keep it in
+            playerController.StoppedTalking();
            
           
         }

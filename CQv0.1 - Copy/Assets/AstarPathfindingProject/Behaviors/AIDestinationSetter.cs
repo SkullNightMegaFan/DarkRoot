@@ -17,6 +17,7 @@ namespace Pathfinding {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
 		IAstarAI ai;
+		//private float enemySearch = 3.0f;
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
@@ -33,7 +34,33 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) ai.destination = target.position;
+			if (target != null && ai != null) 
+			{
+				//Debug.Log("We got one");
+				// if (enemySearch <= 0.0f)
+				// {
+
+				// }
+				ai.destination = target.position;
+				//StartCoroutine(OneSec());
+				return;
+				//target = null;
+			//if target is within range of collider and ai is not null then 
+			//ai.destination = target.position for 3 seconds
+			//return;
+			//ontriggerStay2D if tag == "player"
+			//ai.destination == other.position
+			//on triggerenterexit2D if tag == "player"
+			//ai.position = other.position.
+
+			}
+
+		}
+		IEnumerator OneSec()
+		{
+			yield return new WaitForSeconds(1.0f);
+							Debug.Log("One Second has passed");
+
 		}
 	}
 }

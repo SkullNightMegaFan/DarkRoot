@@ -5209,11 +5209,16 @@ MonoBehaviour:
   swordAttack: {fileID: 0}
   gunAttack: {fileID: 0}
   rb: {fileID: 0}
+  canMove: 1
   isInteracting: 0
   dodgeDuration: 0.5
   dodgeForce: 3000
+  canDodge: 1
+  isTalking: 0
+  canShoot: 1
   maxAmmo: 6
   currentAmmo: 0
+  isReloading: 0
   isInvincible: 0
   burrowMeter: 5
   maxBurrowMeter: 3
@@ -5222,6 +5227,8 @@ MonoBehaviour:
   exitBurrowPoint: {x: 0, y: 0}
   IntroBurrow: {fileID: 0}
   ExitBurrow: {fileID: 0}
+  canBurrow: 1
+  canBurrowExit: 0
 --- !u!114 &-3381235161327335050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5280,8 +5287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 6112242153953430987}
-  strength: 1
-  delay: 0.1
+  strength: 3
+  delay: 0.25
   OnBegin:
     m_PersistentCalls:
       m_Calls:
