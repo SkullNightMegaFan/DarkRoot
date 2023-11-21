@@ -150,19 +150,11 @@ public class PlayerController : MonoBehaviour
 
         if (isTalking)
         {
-            canBurrow = false;
-            isInvincible = true;
-            isInteracting = false;
-            canDodge = false;
-            canShoot = false;
-            LockMovement();
+            Talking();
         }
         else 
         {
-            // UnlockMovement();
-            // canBurrow = true;
-            // isInvincible = false;
-            
+            //StoppedTalking();            
         }
          if (isBurrowing)
          {
@@ -527,6 +519,30 @@ void FinishReloading()
         //Debug.Log("PlayerMovement has been lunocked");
 
         canMove = true;
+    }
+    public void Talking()
+    {
+        Debug.Log("Talking Activated");
+
+          canBurrow = false;
+            isInvincible = true;
+            canDodge = false;
+            canShoot = false;
+            canMove = false;
+            /////////////
+            isTalking = true;
+    }
+    public void StoppedTalking()
+    {
+        Debug.Log("Stopped talking has activated");
+           canBurrow = true;
+            isInvincible = false;
+            canDodge = true;
+            canShoot = true;
+            canMove = true;
+            isTalking = false;
+
+
     }
 }
     
