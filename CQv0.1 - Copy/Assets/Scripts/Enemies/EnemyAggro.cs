@@ -49,4 +49,40 @@ public class EnemyAggro : MonoBehaviour
 
     }
 
+    virtual protected void OnTriggerExit2D(Collider2D other)
+    {
+        //Debug.Log("Collision with " + other.gameObject.name);
+        switch (other.gameObject.layer)
+        {
+            case 6:
+                //  Player layer
+                FlockerScript flocking = this.transform.parent.GetComponent<FlockerScript>();
+                AIPath aiPath = this.transform.parent.GetComponent<AIPath>(); 
+                if (flocking != null)
+                {
+                    flocking.SwitchFlockingMode(FlockerScript.FlockingMode.DoNothing);
+                    enemy.followingPlayer = false;
+
+                }
+                if (aiPath != null)
+                {
+                    aiPath.canMove = false;
+                    enemy.followingPlayer = false;
+
+                }
+
+                break;
+            case 7:
+                //  Enemies layer
+                break;
+            case 8:
+                //  Projectiles layer: ignore for now
+                break;
+            default:
+                break;
+        }
+
+    }
+
+
 }

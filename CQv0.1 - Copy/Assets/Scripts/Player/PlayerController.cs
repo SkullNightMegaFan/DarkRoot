@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     
     //dodgeroll variables.
     float dodgeCoolDownTime = 1.4f;
-    public float dodgeDuration = 5.0f;
-    public float dodgeForce = 10.0f;
+    public float dodgeDuration = 0.3f;
+    public float dodgeForce = 1000.0f;
     public bool canDodge = true;
     public bool isTalking = false;
    
@@ -168,13 +168,15 @@ public class PlayerController : MonoBehaviour
          {
            
               //player is invincible while burrowing.
-            spriteRenderer.color = Color.clear;            
+            spriteRenderer.color = Color.clear;    
+                    
             //later we need to change this so the player creates a dig effect based on 
             //on the floor beneath them. So if the player is in a snowy area, a snow type
             //burrow effect should appear, for now we can get away with just spawning in dirt
             //Instantiate()
 
             burrowMeter -= 1 * Time.deltaTime;
+            
            // StartCoroutine(MiniWait())
             canBurrowExit = true;
             //isInvincible = true;
@@ -365,7 +367,7 @@ void FinishReloading()
     {
         //what the dodge roll actually does
         //first calculate what direction the player is moving. 
-        
+        canBurrow = false;
         canDodge = false;
         isInvincible = true;
         rb.AddForce(movementInput * dodgeForce);
@@ -396,6 +398,7 @@ void FinishReloading()
 
         //Reset status to pre roll, this includes invinciblity and color change
         Debug.Log("Dodgeroll is finished");
+        canBurrow = true;
         canDodge = true;
         spriteRenderer.color = Color.white;
 
@@ -403,7 +406,9 @@ void FinishReloading()
  
     private void Burrow()
     {
+        moveSpeed = moveSpeed * 1.5f;
         canBurrow = false;
+        canDodge = false;
         isInvincible = true;
         //starts the particle system when the player burrows
         burrowParticleSystem.Play();
@@ -444,9 +449,12 @@ void FinishReloading()
     //when player exits the burrow
     void BurrowExit()
     {
+        moveSpeed = (moveSpeed / 1.5f);
         isBurrowing = false;
         isInvincible = false;
+        canDodge = true;
         Debug.Log("Player has exited Burrow");
+        canBurrowExit = false;
         //update later
         //stops the particle system
         burrowParticleSystem.Stop();
