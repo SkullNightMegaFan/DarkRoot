@@ -196,7 +196,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.04
   pickNextWaypointDist: 0.08
-  endReachedDistance: 1.5
+  endReachedDistance: 1.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994ec1706b0708b4e8ae408efafc1eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthpickup: {fileID: 0}
+  ammoPickUp: {fileID: 0}
 --- !u!114 &8768136549282497900
 MonoBehaviour:
   m_ObjectHideFlags: 0

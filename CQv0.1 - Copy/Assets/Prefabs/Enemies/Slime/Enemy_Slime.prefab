@@ -396,6 +396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994ec1706b0708b4e8ae408efafc1eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthpickup: {fileID: 0}
+  ammoPickUp: {fileID: 0}
 --- !u!114 &683611279104645885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +411,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedPerSecond: 0.2
-  FlockingTarget: {fileID: 0}
   CurrentFlockingMode: 3
   DesiredDistanceFromTarget_Min: 0.5
   DesiredDistanceFromTarget_Max: 1
