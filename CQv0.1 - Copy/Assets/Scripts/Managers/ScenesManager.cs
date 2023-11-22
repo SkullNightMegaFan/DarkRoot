@@ -17,7 +17,7 @@ public class ScenesManager : MonoBehaviour
     {  //order must be the same as in Build Settings
         MainMenu,
         YouDied,
-        Level01
+        Level00
     }
 
     public void LoadScene(Scene scene)
@@ -27,7 +27,7 @@ public class ScenesManager : MonoBehaviour
 
     public void LoadNewGame()
     {
-        SceneManager.LoadScene(Scene.Level01.ToString());
+        SceneManager.LoadScene(Scene.Level00.ToString());
     }
 
     public void LoadNextScene()
