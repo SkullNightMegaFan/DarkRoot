@@ -110,6 +110,8 @@
     <Compile Include="Assets\Scripts\RotateToMouse.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoAimer.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoTarget.cs" />
+    <Compile Include="Assets\Scripts\GoTransparent.cs" />
+    <Compile Include="Assets\Scripts\CanBurrowUnder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Fonts\black_chancery\BLACKCHA.TXT" />

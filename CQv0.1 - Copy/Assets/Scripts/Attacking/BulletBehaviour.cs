@@ -51,6 +51,10 @@ public class BulletBehaviour : MonoBehaviour
         //         //  Projectiles layer: ignore for now
         //         Destroy(this.gameObject);
         //         break;
+        case 15:
+                Destroy(this.gameObject);
+                break;
+
             default:
                 
                 break;

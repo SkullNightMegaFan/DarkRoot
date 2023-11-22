@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     ParticleSystem burrowParticleSystem;
     public Rigidbody2D rb;
+    CapsuleCollider2D collision;
     Animator animator;
     PlayerInventory playerInventory;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public bool isBurrowing;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
+    public GameObject BurrowCollider;
     public GameObject IntroBurrow;
     public GameObject ExitBurrow;
     //ideally this should be a list that the player's code reads from
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        collision = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerInventory = GetComponent<PlayerInventory>();
@@ -82,11 +85,10 @@ public class PlayerController : MonoBehaviour
 
     }
     private void Update()
-    {
-       
-        
+    { 
         //this line of code prevents burrowmeter from surpassing maxBurrowMeter
         burrowMeter = Mathf.Clamp(burrowMeter, 0, maxBurrowMeter);
+
         //if movement input is not 0, try to move
         if (canMove) // check if movement has been turned off
         {
@@ -144,7 +146,6 @@ public class PlayerController : MonoBehaviour
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
         if (canBurrow && Input.GetButtonDown("Burrow"))
         {
-          
             Burrow();
         }
 
@@ -398,6 +399,10 @@ void FinishReloading()
  
     private void Burrow()
     {
+        collision.enabled = false;  //turns off Player's normal collider
+        BurrowCollider.SetActive(true);  // seperate collider that can only collide with impassable objects
+        movementFilter.layerMask  &= ~(1 << 3); movementFilter.layerMask &= ~(1 << 0);
+
         moveSpeed = moveSpeed * 1.5f;
         canBurrow = false;
         canDodge = false;
@@ -441,6 +446,10 @@ void FinishReloading()
     //when player exits the burrow
     void BurrowExit()
     {
+        collision.enabled = true;  //turns on Player's normal collider
+        BurrowCollider.SetActive(false);
+        movementFilter.layerMask |= (1 << 0); movementFilter.layerMask |= (1 << 3);
+
         moveSpeed = (moveSpeed / 1.5f);
         isBurrowing = false;
         isInvincible = false;
