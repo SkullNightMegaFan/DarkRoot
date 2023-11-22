@@ -63,6 +63,7 @@
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoPreview.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemPanelHUD.cs" />
     <Compile Include="Assets\Scripts\UI\UIGameMenu.cs" />
+    <Compile Include="Assets\Scripts\GoTransparent.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Items\AmmoPickUp.cs" />
     <Compile Include="Assets\Scripts\Player\ExitBurrow.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\Items\HealthPickUp.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy_GunAttack.cs" />
     <Compile Include="Assets\Scripts\UI\ReloadUIScript.cs" />
+    <Compile Include="Assets\Scripts\CanBurrowUnder.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedEnemyAggro.cs" />
     <Compile Include="Assets\Scripts\Enemies\OnEnemyDeath.cs" />
     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
@@ -110,8 +112,6 @@
     <Compile Include="Assets\Scripts\RotateToMouse.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoAimer.cs" />
     <Compile Include="Assets\2D Slash VFX\Demo\Code\DemoTarget.cs" />
-    <Compile Include="Assets\Scripts\GoTransparent.cs" />
-    <Compile Include="Assets\Scripts\CanBurrowUnder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Fonts\black_chancery\BLACKCHA.TXT" />
