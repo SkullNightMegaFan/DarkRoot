@@ -1,9 +1,29 @@
 {
 	"Runes": [
 		{
-		"runestoneName":"TutorialMoving",
-		"runeTitle":"Moving",
-		"runeText":"rune texxt"
+			"runestoneName": "TutorialMoving",
+			"runeTitle": "Moving",
+			"runeText": "rune texxt"
+		},
+		{
+			"runestoneName": "TutorialInteract",
+			"runeTitle": "Interact",
+			"runeText": "rune texxt"
+		},
+		{
+			"runestoneName": "TutorialShooting",
+			"runeTitle": "Shooting",
+			"runeText": "rune texxt"
+		},
+		{
+			"runestoneName": "TutorialDodging",
+			"runeTitle": "Dodging",
+			"runeText": "rune texxt"
+		},
+		{
+			"runestoneName": "TutorialBurrowing",
+			"runeTitle": "Burrowing",
+			"runeText": "rune texxt"
 		}
 	]
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5913400662910237463}
   - component: {fileID: 5913400662910237481}
   - component: {fileID: 5913400662910237462}
-  - component: {fileID: 7594380974961363641}
+  - component: {fileID: 1991955805069671172}
   m_Layer: 5
   m_Name: RunestoneDisplay
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7594380974961363641
+--- !u!114 &1991955805069671172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
