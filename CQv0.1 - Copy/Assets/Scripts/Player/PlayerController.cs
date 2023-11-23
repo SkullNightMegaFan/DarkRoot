@@ -245,6 +245,7 @@ public class PlayerController : MonoBehaviour
         if (canShoot && Input.GetMouseButtonDown(0))
         {
             gunAttack.Attack();
+            OnGunAttack?.Invoke();
             currentAmmo--;
         }
         else
