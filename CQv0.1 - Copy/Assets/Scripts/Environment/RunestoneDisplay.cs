@@ -2,62 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RunestoneDisplay : MonoBehaviour
 {
-    public string runestoneName;
-    string currentRune;
 
-    GameObject display;
-    Canvas canvas;
-    
-    
+    public TMP_Text runeTitle;
+    public TMP_Text runeText;
+
+    RunestoneDatabase runeData;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject tempObject = GameObject.Find("RunestoneCanvas");   // find the canvas to spawn display in
-        if (tempObject != null)
-        {
-            //If we found the object , get the Canvas component from it.
-            canvas = tempObject.GetComponent<Canvas>();
-            display = canvas.transform.GetChild(0).gameObject;
-            if (canvas == null)
-            {
-                Debug.Log("Could not locate Canvas component on " + tempObject.name);
-            }
-        }
+        runeData = GetComponent<RunestoneDatabase>();
 
     }
 
-    virtual protected void OnTriggerEnter2D(Collider2D other)
+    public void SpawnDisplayText(string runestoneName)
     {
-        //Debug.Log("Collision with " + other.gameObject.name);
-        switch (other.gameObject.layer)
-        {
-            case 6:  //  Player layer
-                currentRune = runestoneName;
-                SpawnDisplayText();
-                break;
-        }
-    }
-    virtual protected void OnTriggerExit2D(Collider2D other)
-    {
-        //Debug.Log("Collision with " + other.gameObject.name);
-        switch (other.gameObject.layer)
-        {
-            case 6:  //  Player layer
-                HideDisplay();
-                break;
-        }
-    }
+        Debug.Log("spawn display function triggered");
 
-    void SpawnDisplayText()
-    {
-        display.SetActive(true);
-    }
-    void HideDisplay()
-    {
-        display.SetActive(false);
-    }
+        runeTitle.text = runeData.GetRuneTitle(runestoneName);
+        runeText.text = runeData.GetRuneText(runestoneName);
 
+        this.gameObject.SetActive(true);
+    }
+    public void HideDisplay()
+    {
+        Debug.Log("hide display function triggered");
+
+        this.gameObject.SetActive(false);
+
+    }
 }
