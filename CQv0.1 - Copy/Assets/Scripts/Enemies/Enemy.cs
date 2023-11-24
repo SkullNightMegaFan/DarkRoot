@@ -145,8 +145,13 @@ public class Enemy : MonoBehaviour
 
     virtual protected void ChaseTarget()
     {
-        this.GetComponent<FlockerScript>().SwitchFlockingMode(FlockerScript.FlockingMode.ChaseTarget);
+        FlockerScript flocker = this.GetComponent<FlockerScript>();
+        if (flocker != null)
+        {
+            flocker.SwitchFlockingMode(FlockerScript.FlockingMode.ChaseTarget);
+        }
     }
+   
 
 
     virtual protected void MoveAnimation(bool canMove, Vector2 velocity)
