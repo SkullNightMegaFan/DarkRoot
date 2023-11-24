@@ -256,6 +256,7 @@ MonoBehaviour:
   health: 12
   gun: {fileID: 6592794341872487372}
   fireRate: 1
+  isAggroed: 0
 --- !u!70 &1431088389043852113
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -269,8 +270,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00059884787, y: -0.036581367}
-  m_Size: {x: 0.15221044, y: 0.15415794}
+  m_Offset: {x: 0.000076413155, y: -0.0038710386}
+  m_Size: {x: 0.12790164, y: 0.15221044}
   m_Direction: 0
 --- !u!114 &2349945176990556747
 MonoBehaviour:
@@ -632,3 +633,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7557740703533069705, guid: 7b5c011b8a89b2f4db7e7a2227d3f69f, type: 3}
   m_PrefabInstance: {fileID: 3718903083164155461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6839761941603506467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7887920167887955814, guid: 7b5c011b8a89b2f4db7e7a2227d3f69f, type: 3}
+  m_PrefabInstance: {fileID: 3718903083164155461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2503542364393962439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839761941603506467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df06ed929e406d345936405df681a127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAnchor: {fileID: 4497391826659413724}
