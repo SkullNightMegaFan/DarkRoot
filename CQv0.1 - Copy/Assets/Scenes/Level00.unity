@@ -180,11 +180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (6)
+      value: runestone_tutorialBurrowing
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialBurrowing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
@@ -5548,11 +5552,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (2)
+      value: runestone_tutorialCombat
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialCombat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
@@ -6556,6 +6564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RunestoneDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 5913400662910237460, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5913400662910237463, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6639,6 +6651,66 @@ PrefabInstance:
     - target: {fileID: 5913400662910237463, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSize
+      value: 57.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_margin.w
+      value: -234.1242
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_margin.x
+      value: -281.2282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_margin.y
+      value: -171.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_margin.z
+      value: -270.2942
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400663218313269, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762558, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSize
+      value: 45.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762558, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762558, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762558, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762559, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 306.2449
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913400664348762559, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.8749
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7594380974961363641, guid: e718fc1cb62b2d64e9d61d075bbd5ebd, type: 3}
@@ -6775,23 +6847,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5213665375242134680, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Size.x
-      value: 0.8182775
+      value: 0.75658524
       objectReference: {fileID: 0}
     - target: {fileID: 5213665375242134680, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Size.y
-      value: 0.66144264
+      value: 0.3744395
       objectReference: {fileID: 0}
     - target: {fileID: 5213665375242134680, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Offset.x
-      value: -0.16415608
+      value: -0.15476811
       objectReference: {fileID: 0}
     - target: {fileID: 5213665375242134680, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Offset.y
-      value: -0.052254036
+      value: -0.058959678
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone
+      value: runestone_tutorialMoving
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
@@ -7320,11 +7392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (1)
+      value: runestone_tutorialInteract
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialInteract
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
@@ -14164,11 +14240,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (4)
+      value: runestone_tutorialHealth
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialHealth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
@@ -26426,11 +26506,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (5)
+      value: runestone_tutorialDodging
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialDodging
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
@@ -28625,11 +28709,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_Name
-      value: runestone (3)
+      value: runestone_tutorialInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836470081320671404, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7870908739084068344, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160271584239031352, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}
+      propertyPath: runestoneName
+      value: TutorialInventory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86956a319a7494fb94c8ca414b0573, type: 3}

@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\UI\HealthHeart.cs" />
     <Compile Include="Assets\Scripts\RotateToMouse.cs" />
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoAimer.cs" />
+    <Compile Include="Assets\Scripts\Environment\RuneTrigger.cs" />
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoTarget.cs" />
   </ItemGroup>
   <ItemGroup>
