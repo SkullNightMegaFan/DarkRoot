@@ -12,9 +12,10 @@ public class Enemy_BulletBunny : Enemy
 
     private void FixedUpdate()
     {
-        Vector3 rotationAnchorPosition = transform.position;
+        //Vector3 rotationAnchorPosition = transform.position;
         Vector3 playerPosition = player.transform.position;
-        LookToPlayer(playerPosition, rotationAnchorPosition);
+        //LookToPlayer(playerPosition, rotationAnchorPosition);
+        StartCoroutine(EnemyShoot());
     }
 
     protected override void ChaseTarget()
