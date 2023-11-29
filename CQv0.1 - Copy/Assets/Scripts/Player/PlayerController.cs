@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
     //burrowVariables
     public float burrowMeter;
     public float maxBurrowMeter = 3.0f;
+    private float burrowConsumptionRate = 1.0f;
+    private float burrowRechargeRate = 0.5f;
     public bool isBurrowing;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private GameObject clone2;
     void Start()
     {
+         
         rb = GetComponent<Rigidbody2D>();
         collision = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
@@ -141,6 +144,18 @@ public class PlayerController : MonoBehaviour
             DodgeRoll();
         }
 
+        //the player will only be able to burrow when burrowMeter is free
+        //I'll add an update where this doesn't apply outside of battle, similar to 
+        //enter the gungeon. 
+        if (canBurrow || isTalking || isInteracting)
+        {
+            ///
+        }
+        else
+        {
+            canBurrow = !isBurrowing && Mathf.Approximately(burrowMeter, maxBurrowMeter);
+
+        }
 
 
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
@@ -168,7 +183,8 @@ public class PlayerController : MonoBehaviour
             //burrow effect should appear, for now we can get away with just spawning in dirt
             //Instantiate()
 
-            burrowMeter -= 1 * Time.deltaTime;
+            //The rate that the burrow meter decreases,
+            burrowMeter -= burrowConsumptionRate* Time.deltaTime;
             
            // StartCoroutine(MiniWait())
             canBurrowExit = true;
@@ -194,7 +210,7 @@ public class PlayerController : MonoBehaviour
          else 
          {
             //while player is not burrowing, they recharge their burrowMeter as time passes
-            burrowMeter += 1 * Time.deltaTime;
+            burrowMeter += burrowRechargeRate * Time.deltaTime;
             //burrowParticle.enabled = !burrowParticle.enabled;
            // burrowParticle.SetActive(false);
 
@@ -410,25 +426,11 @@ void FinishReloading()
         isInvincible = true;
         //starts the particle system when the player burrows
         burrowParticleSystem.Play();
-        /*player becomes invincible, 
-        //the player sprite becomes invisible
-        the point is able 
-        */
-        //first the player must destroy the previous burrow's
-        //Probably need to make an if statement if previous 
-        //burrow's exist. But let's get it working first.
-        Debug.Log("New Burrow is activated");
-
-        //destroy previous pairs of burrows
-        //burrow is no longer being created, the burrow is being created and then immediately destroyed? 
-        //put this in the clean up phase. 
 
         // if there are any intro or exit burrows
         // then destroy them 
         Destroy(clone1);
-        Destroy(clone2);
-        //Destroy(ExitBurrow.gameObject);
-        
+        Destroy(clone2);      
              
 
         //creating the intro burrow point
@@ -440,8 +442,6 @@ void FinishReloading()
         isBurrowing = true;
         //toggle burrow
        //StartCoroutine()
-
-
 
     }
     //when player exits the burrow
@@ -465,11 +465,6 @@ void FinishReloading()
         spriteRenderer.color = Color.white;
 
            StartCoroutine(MiniWait());
-
-        
-        //canburrow is true if the player is not burrowing and burrow meter is above 0.
-        //need to create a new bool variable to have these two flags be true in order for canBurrow to be true 
-        canBurrow = true;
         
     }
        public void OnMelee()

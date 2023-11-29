@@ -34,7 +34,7 @@ public class ExitBurrow : MonoBehaviour
 {
     
                  PlayerController playerController = other.GetComponent<PlayerController>();
-                 BulletBehavior bulletBehavior = other.GetComponent<BulletBehavior>();
+                 BulletBehaviour bulletBehaviour = other.GetComponent<BulletBehaviour>();
 
         if (other.CompareTag("PlayerProjectiles"))
         {
