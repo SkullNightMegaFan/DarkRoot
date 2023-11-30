@@ -7,37 +7,47 @@ public class RangedEnemyAggro : EnemyAggro
 {
 
 
-    protected override void OnTriggerEnter2D(Collider2D other)
+    protected override void EnterAggro()
     {
-        //Debug.Log("Collision with " + other.gameObject.name);
-        switch (other.gameObject.layer)
+        Enemy_BulletBunny bulletBunny = this.transform.parent.GetComponent<Enemy_BulletBunny>();
+        FlockerScript flocking = this.transform.parent.GetComponent<FlockerScript>();
+        AIPath aiPath = this.transform.parent.GetComponent<AIPath>();
+
+        if (flocking != null)
         {
-            case 6:
-                //  Player layer
-                FlockerScript flocking = this.transform.parent.GetComponent<FlockerScript>();
-                AIPath aiPath = this.transform.parent.GetComponent<AIPath>();
-                if (flocking != null)
-                {
-                    flocking.SwitchFlockingMode(FlockerScript.FlockingMode.MaintainDistance);
-                    enemy.followingPlayer = true;
+            flocking.SwitchFlockingMode(FlockerScript.FlockingMode.MaintainDistance);
+            enemy.followingPlayer = true;
+            bulletBunny.isAggroed = true;
+        }
+        if (aiPath != null)
+        {
+            aiPath.canMove = true;
+            enemy.followingPlayer = true;
+            bulletBunny.isAggroed = true;
 
-                }
-                if (aiPath != null)
-                {
-                    aiPath.canMove = true;
-                    enemy.followingPlayer = true;
+        }
 
-                }
+    }
+    protected override void ExitAggro()
+    {
+        Enemy_BulletBunny bulletBunny = this.transform.parent.GetComponent<Enemy_BulletBunny>();
+        FlockerScript flocking = this.transform.parent.GetComponent<FlockerScript>();
+        AIPath aiPath = this.transform.parent.GetComponent<AIPath>();
+        if (flocking != null)
+        {
+            flocking.SwitchFlockingMode(FlockerScript.FlockingMode.DoNothing);
+            enemy.followingPlayer = false;
+            bulletBunny.isAggroed = false;
 
-                break;
-            case 7:
-                //  Enemies layer
-                break;
-            case 8:
-                //  Projectiles layer: ignore for now
-                break;
-            default:
-                break;
+        }
+        if (aiPath != null)
+        {
+            aiPath.canMove = false;
+            enemy.followingPlayer = false;
+            bulletBunny.isAggroed = false;
+
         }
     }
+
+ 
 }

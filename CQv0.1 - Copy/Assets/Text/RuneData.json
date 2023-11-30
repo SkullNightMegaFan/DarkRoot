@@ -1,0 +1,39 @@
+{
+	"Runes": [
+		{
+			"runestoneName": "TutorialMoving",
+			"runeTitle": "Moving",
+			"runeText": "Use 'WASD' keys to Move. \n\n Try moving to exit this message. \n\n Approach other Runestones for more Tips & Hints."
+		},
+		{
+			"runestoneName": "TutorialInteract",
+			"runeTitle": "Interact",
+			"runeText": "Press 'E' to Interact with objects, to pick up items, or to talk with characters."
+		},
+		{
+			"runestoneName": "TutorialCombat",
+			"runeTitle": "Combat",
+			"runeText": "Click the LMB to Shoot your gun. \n\n Use this to defeat enemies from far away! \n\n Click the RMB to swing your sword, which can defeat enemies close to you."
+		},
+		{
+			"runestoneName": "TutorialInventory",
+			"runeTitle": "Inventory",
+			"runeText": "How to use inventory"
+		},
+		{
+			"runestoneName": "TutorialHealth",
+			"runeTitle": "Health",
+			"runeText": "Watch out for enemies, which will decrease your hearts with their attacks. \n\n When your hearts reach zero (found in top left of screen), you will die. \n\n Kill the enemies before they can kill you!"
+		},
+		{
+			"runestoneName": "TutorialDodging",
+			"runeTitle": "Dodging",
+			"runeText": "Press 'SPACEBAR' to dodge a short distance in the direction you are moving. \n\n Dodge to avoid enemy attacks."
+		},
+		{
+			"runestoneName": "TutorialBurrowing",
+			"runeTitle": "Burrowing",
+			"runeText": "Hold 'SHIFT' to burrow, and release 'SHIFT' to stop burrowing. \n\n After making a burrow, press 'E' on one of your burrow points to quickly move through the burrow! \n\n Use burrowing to escape enemy attacks or to bypass obstacles. \n\n Try burrowing under the rocks bocking the path!"
+		}
+	]
+}

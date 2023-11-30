@@ -15,7 +15,9 @@ public class Enemy : MonoBehaviour
     Animator animator;
     protected internal GameObject player;
     Vector2 velocity;
-    
+    bool canMove;
+
+
     public SpriteRenderer sprite;
     public GameObject lootType;
     public int damage = 2;
@@ -52,13 +54,12 @@ public class Enemy : MonoBehaviour
         aiPath = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         destinationSetter.target = player.transform;
-
-
     }
     private void Update()
     {
         velocity = GetComponent<AIPath>().velocity;
-        MoveAnimation();
+        canMove = aiPath.canMove;
+        MoveAnimation(canMove, velocity);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -144,20 +145,48 @@ public class Enemy : MonoBehaviour
 
     virtual protected void ChaseTarget()
     {
-        this.GetComponent<FlockerScript>().SwitchFlockingMode(FlockerScript.FlockingMode.ChaseTarget);
+        FlockerScript flocker = this.GetComponent<FlockerScript>();
+        if (flocker != null)
+        {
+            flocker.SwitchFlockingMode(FlockerScript.FlockingMode.ChaseTarget);
+        }
     }
-    virtual protected void MoveAnimation()
+   
+
+
+    virtual protected void MoveAnimation(bool canMove, Vector2 velocity)
     {
-        /*
-        if (velocity.x > 0 || velocity.y > 0)
+        if (canMove) // check if movement has been turned off
         {
-            animator.SetBool("isMoving", true);
+            if (velocity != Vector2.zero)
+            {
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+
+            //Set direction of sprite to movement direction
+
+            if (velocity.y < 0) //moving down
+            {
+                animator.SetBool("isMovingDown", true); animator.SetBool("isMovingUp", false);
+                animator.SetBool("isMovingLeft", false); animator.SetBool("isMovingRight", false);
+            }
+            else if (velocity.y > 0) //moving up
+            {
+                animator.SetBool("isMovingUp", true); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingLeft", false); animator.SetBool("isMovingRight", false);
+            }
+            else if (velocity.x < 0) //moving left
+            {
+                animator.SetBool("isMovingLeft", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingRight", false);
+            }
+            else if (velocity.x > 0) //moving right
+            {
+                animator.SetBool("isMovingRight", true); animator.SetBool("isMovingUp", false); animator.SetBool("isMovingDown", false); animator.SetBool("isMovingLeft", false);
+            }
         }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
-        */
     }
 
 }

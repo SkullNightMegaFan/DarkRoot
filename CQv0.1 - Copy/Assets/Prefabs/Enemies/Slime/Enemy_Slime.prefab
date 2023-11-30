@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 4614043600996924330}
   - component: {fileID: 918487211188886545}
   - component: {fileID: 2690673185837375963}
-  - component: {fileID: 6367032035337133718}
   - component: {fileID: 507442695840546055}
   - component: {fileID: 6899736412568575113}
   - component: {fileID: 2319164659280831368}
@@ -133,7 +132,6 @@ GameObject:
   - component: {fileID: 7137710787162066112}
   - component: {fileID: 2680473580917554852}
   - component: {fileID: 5786755923821985242}
-  - component: {fileID: 683611279104645885}
   - component: {fileID: 9171382832232275868}
   - component: {fileID: 5350361757270310129}
   m_Layer: 7
@@ -200,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1866411934, guid: 173a7b02e663a2e469327d1f7a4a4fab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99e00618d074ae74b8cdce3e8fb657e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -231,19 +229,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &6367032035337133718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673395765194936653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187ee677d1342d3479e9514e75795ddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 6899736412568575113}
 --- !u!114 &507442695840546055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,8 +347,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000013047795, y: -0.015547181}
-  m_Size: {x: 0.14841218, y: 0.13229199}
+  m_Offset: {x: 0.000000015033809, y: 0.0011127145}
+  m_Size: {x: 0.15348846, y: 0.15167429}
   m_Direction: 1
 --- !u!114 &2680473580917554852
 MonoBehaviour:
@@ -396,27 +381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994ec1706b0708b4e8ae408efafc1eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &683611279104645885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5673395765194936653}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a017a2a4b4bb8d408f76d56cdd612cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeedPerSecond: 0.2
-  FlockingTarget: {fileID: 0}
-  CurrentFlockingMode: 3
-  DesiredDistanceFromTarget_Min: 0.5
-  DesiredDistanceFromTarget_Max: 1
-  avoidHazards: 1
-  avoidAllies: 1
-  desiredDirection: {x: 0, y: 0, z: 0}
-  movementDirection: {x: 0, y: 0, z: 0}
+  healthpickup: {fileID: 0}
+  ammoPickUp: {fileID: 0}
 --- !u!114 &9171382832232275868
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,12 +9,18 @@ public class Enemy_BulletBunny : Enemy
     [SerializeField] float fireRate = 1f;
     private Enemy_GunAttack gunAttack;
     private bool isFiringGun = false;
+    public bool isAggroed;
 
     private void FixedUpdate()
     {
-        Vector3 rotationAnchorPosition = transform.position;
+        //Vector3 rotationAnchorPosition = transform.position;
         Vector3 playerPosition = player.transform.position;
-        LookToPlayer(playerPosition, rotationAnchorPosition);
+        //LookToPlayer(playerPosition, rotationAnchorPosition);
+        if (isAggroed)
+        {
+            ShootTarget();
+        }
+
     }
 
     protected override void ChaseTarget()
@@ -23,7 +29,14 @@ public class Enemy_BulletBunny : Enemy
 
 
     }
-
+    public void ShootTarget()
+    {
+        StartCoroutine(EnemyShoot());
+    }
+    public void StopShoot()
+    {
+        StopCoroutine(EnemyShoot());
+    }
     void LookToPlayer(Vector3 target, Vector3 anchor)
     {
         direction = target - anchor;

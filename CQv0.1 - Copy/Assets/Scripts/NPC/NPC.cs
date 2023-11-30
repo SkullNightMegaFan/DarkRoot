@@ -9,26 +9,46 @@ public class NPC : MonoBehaviour
     public GameObject dialogueCanvas;
 
     public GameObject player;
+    
+    //add list of all enemies
   
     private void OnTriggerStay2D(Collider2D other)
     {
            PlayerController playerController = player.GetComponent<PlayerController>();
+           //Post vertical slice, I'll have the dialogue text to read from a text file and
+           //every time the player presses e it will have them go through the next blurb. 
+           Text dialogueText = dialogueCanvas.GetComponentInChildren<Text>();
         //this works
         if (other.CompareTag("Player"))
         {
-           // PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
              interactCanvas.SetActive(true);
-           // Destroy(gameObject);
-           //I tried to have it so only while isInteracting is true would the dialogue canvas work 
-           //but because it runs multiple times(not sure why, prob need to fix that later)
-           //but it also always works even when isinteracting is set to false. Maybe i'm missing something
-           //for now, we'll just set it to the input. get button
-            if (Input.GetButton("Interact"))
+             //will get around to mapping it to the action key
+            if (playerController.isInteracting == true && playerController.isTalking == false)
             {
+                //vertical slice implementation
+                    //when the player is talking all enemies OnFlock script should change to teh DoNothing behavior. 
+
                 dialogueCanvas.SetActive(true);
+                
+
+                dialogueText.text = "Press E";
+                //post verticle slice i should just create a dialogue tree coroutine and go from there. 
+                //not sure how i would do that with the return values needed but if there's a will there's a way. 
+                StartCoroutine(MiniWait());
+                //A coroutine will start and then immediately go to the next line of code
+                // it does not need to be finished in order for the next line of code to be fun. 
+                //playerController.Talking();
+               // StartCoroutine(MiniWait());
+                //eventually this will be using the new input manager system but for now this will do.
+                //in addition, i want the dialogue text, to be read from a txt file. 
+              //   if (Input.GetKey(KeyCode.E))
+                
+            }   
+            else
+            {
+                //
             }
-           
           
         }
         else
@@ -36,8 +56,45 @@ public class NPC : MonoBehaviour
             interactCanvas.SetActive(false);
 
         }
+
+        if (playerController.isTalking == true  && playerController.isInteracting == true)//dialogueCanvas.activeSelf == true)
+        //if (playerController.isTalking == true && )
+        {
+             //if (Input.GetKey(KeyCode.Space))
+                          
+                dialogueText.text = "This is the second dialogue";
+                playerController.StoppedTalking();
+                     
+
+                    
+               // else if (Input.GetKeyDown(KeyCode.Space))
+            //    else if (Input.GetMouseButtonDown(0))
+            //     {
+            //     //     dialogueCanvas.SetActive(false);
+            //     //        playerController.UnlockMovement();
+            //     //       playerController.canDodge = true;
+            //     //  playerController.canShoot = true;
+            //     //  playerController.isInvincible = false;
+            //     playerController.isTalking = false;
+            //     Debug.Log("The B has been pressed");
+            //     }
+        }
     }
+
+    IEnumerator MiniWait()
+    {
+                   PlayerController playerController = player.GetComponent<PlayerController>();
+
+    yield return new WaitForSeconds(0.3f);
+        playerController.Talking();
+
+
+    }
+
+
+    
     private void OnTriggerExit2D(Collider2D other)
+    
     {
                 PlayerController playerController = player.GetComponent<PlayerController>();
 
@@ -47,10 +104,9 @@ public class NPC : MonoBehaviour
            //canvas is not being enabled when this line of code
            interactCanvas.SetActive(false);
            dialogueCanvas.SetActive(false);
-            //playerInventory.playerPistolAmmo += 6;
-            //this line of code is working.
-            Debug.Log("Player leaves interaction zone");
-           // Destroy(gameObject);
+           //I think this allows player to exit an NPC's interact area and get free dodge cool down. 
+           //Sounds cool i'll keep it in
+            playerController.StoppedTalking();
            
           
         }
@@ -60,4 +116,6 @@ public class NPC : MonoBehaviour
 
         }
     }
+
+
 }

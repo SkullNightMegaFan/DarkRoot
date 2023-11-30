@@ -1,0 +1,3123 @@
+fileFormatVersion: 2
+guid: acee746b74013ce4abc5c608b2d99a32
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 656
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 945
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0c2ef4f13bd674a8735249b2d549c4
+      internalID: 441260049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 945
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124d548502239e64fb55fea4f03d80e4
+      internalID: -2099741807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_2
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 945
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d57b347e336ed740ad73ca9a2334d92
+      internalID: 1338881534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 945
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce684d63a998f342bbeb867c0f534c3
+      internalID: -485688218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_4
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 945
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76777bdc95b3e944856f91135dd22be
+      internalID: -1200817868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7.5, y: 5.5}
+        - {x: -14.5, y: -19.5}
+        - {x: -1.5, y: -43.5}
+        - {x: 33.5, y: -45.5}
+        - {x: 52.5, y: -49.5}
+        - {x: 52.5, y: 5.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f08664478ad5c346b1c28c5d80b4a5c
+      internalID: -1616445100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: 5.5}
+        - {x: -52.5, y: -46.5}
+        - {x: 1.5, y: -45.5}
+        - {x: 17.5, y: -26.5}
+        - {x: -0.5, y: 5.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f042c6d60d838334ebdbf5fddd3449fb
+      internalID: 1014968296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dcc133c44d1e94593c9710d04893e5
+      internalID: -1041535085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6660432fc5cdb468ff2b60f63f2b53
+      internalID: -1728186891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_9
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15cea18426f6a346924c149c27e47e2
+      internalID: -1768637895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_10
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fa35c43b4bdac48a7be60e997c0cc1
+      internalID: 1372437581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ac6cd6df181684a9f6b8065d1a343d
+      internalID: -457005874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_12
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e270920663cd134ba5ace8b0f8ceb24
+      internalID: 783512730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_13
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 840
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acadcb65b20877542bf1cacd36028ab4
+      internalID: -1285155368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -27.5, y: -4.5}
+        - {x: -28.5, y: -32.5}
+        - {x: 3.5, y: -46.5}
+        - {x: 52.5, y: -46.5}
+        - {x: 52.5, y: -4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab923cad93212d42a8cd112a4c9c66f
+      internalID: 55110281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_15
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -4.5}
+        - {x: -52.5, y: -46.5}
+        - {x: 52.5, y: -46.5}
+        - {x: 52.5, y: -4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714fb199d523839408b1aef600aa8ea7
+      internalID: -625733402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_16
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -4.5}
+        - {x: -52.5, y: -46.5}
+        - {x: 52.5, y: -46.5}
+        - {x: 52.5, y: -4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0710b686f5cbb834a939347c1c9934f4
+      internalID: 1422136996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -4.5}
+        - {x: -52.5, y: -46.5}
+        - {x: 40.5, y: -46.5}
+        - {x: 41.5, y: -4.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25863662eb24b442827541a4744613c
+      internalID: 557273371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_18
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -27.5, y: -7.5}
+        - {x: -27.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc89e7c8e58f6845b8a0234614e69dd
+      internalID: 1573045080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_19
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -29.5, y: -7.5}
+        - {x: -29.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -43.5}
+        - {x: 30.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027693b60e6694b4aaee9e5fe38ba7b5
+      internalID: 1976320476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_20
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -46.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57dee5d82911ee54ba32c9ccda0f1427
+      internalID: 1117395473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_21
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -47.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fe35036cf3b1e4db5bb1bea095295c
+      internalID: 1105641674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_22
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -29.5, y: -7.5}
+        - {x: -29.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -43.5}
+        - {x: 30.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d128df85b4fd7bd42bb696a5b85cd88b
+      internalID: 2067784403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_23
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -46.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41095b8cf235a2a43b020861d9dd6f35
+      internalID: -1277485839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_24
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 735
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -47.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808b0d9fc73408645941b8b946dbb0ef
+      internalID: 1176021945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eca1af10f247d4ab7e3756b44a6f2c
+      internalID: 2134131324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_26
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef803218fb8afb14a9e1a5b602f0ed84
+      internalID: -831071053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_27
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cb741fad2c745408aa162f79b06387
+      internalID: -1561073582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_28
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2409994d68bdf5e4a88c75995ffaadf6
+      internalID: 617951387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_29
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7680147084f378346a7b1f64d5fd30b1
+      internalID: 1933915488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_30
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3559dba38e71bbe47a9d686cd7de9958
+      internalID: -2050343143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_31
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa6e7e6a127478489134b595270d34f
+      internalID: 1707347007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_32
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160ff79d2d4aa5140b8b0d76668e1a8c
+      internalID: -439847615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_33
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5fc7f2a0545ea4c87bc3e2fb23e664
+      internalID: 1329365390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_34
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eb41cd96f0842439e3e17a1acc0d04
+      internalID: -30928893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_35
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 14.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: 13.5}
+        - {x: -28.5, y: -8.5}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -8.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dccbbdc8f98a4a4bb60c1c1fe18cebe
+      internalID: -689903083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_36
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: 13.5}
+        - {x: -28.5, y: -7.5}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+        - {x: 30.5, y: -7.5}
+        - {x: 20.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebeb0faf3d9a7e041b02e5c29809174c
+      internalID: 1671345993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_37
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: -7.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: -7.5}
+        - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -46.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ad176d5c83d1d42988f0d0f7d8b1af
+      internalID: -583784483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_38
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 12.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: -7.5}
+        - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.62036}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c896cbc4bea39409066e7b3f49ac62
+      internalID: 463005600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_39
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -29.5, y: -7.5}
+        - {x: -29.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -43.5}
+        - {x: 30.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3587622b35fa214d88b9cb807bff4d1
+      internalID: -250951749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_40
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -31.5}
+        - {x: -36.5, y: -31.5}
+        - {x: 0.5, y: -12.5}
+        - {x: 0.5, y: -7.5}
+      - - {x: 0.5, y: -7.5}
+        - {x: 0.5, y: -12.5}
+        - {x: 39.5, y: -31.5}
+        - {x: 52.5, y: -31.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a9c8686c3a59e49ba61854eb9866a0
+      internalID: 1733610501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_41
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 630
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -47.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0927833693e689646a151b8b70dbe1d1
+      internalID: 955355984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6991796d3504f84ebb108df52196e3e
+      internalID: 1735156396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_43
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135c37860c5a42f4c8295b511ec0a03d
+      internalID: -1898856080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_44
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58ddcc25c1620c4babd6121064dd408
+      internalID: 405044049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_45
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b424ce6b83e6ba41a63f6f926145dfe
+      internalID: -847202120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_46
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018f5713dbe942342a54385fbd71226e
+      internalID: 136473844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_47
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abde3ba6652d09b418905a69674f3aa5
+      internalID: -1413217625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_48
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851be95b5291d664c8ca8dd492cc3578
+      internalID: -826547048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_49
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9be81c73b6b5c4da3734c1ae237c80
+      internalID: -1212410281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_50
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb289ed0ceaad142a9d6699df170d35
+      internalID: -1766629054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_51
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619fd9a3d69bfc74c9c61fcb4cc5f5e0
+      internalID: 1276232203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_52
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 14.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: 13.5}
+        - {x: -28.5, y: -8.5}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -8.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea5954ab6a37654f823d2e88f52026e
+      internalID: 1276130890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_53
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: 13.5}
+        - {x: -28.5, y: -7.5}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+        - {x: 30.5, y: -7.5}
+        - {x: 20.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a12374f78f385e4fa78767ae520090b
+      internalID: 973558508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_54
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: -7.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: -7.5}
+        - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.5}
+        - {x: -28.5, y: -46.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 52.5, y: -33.5}
+        - {x: 52.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bbb610e01d88a429de23da840770fd
+      internalID: -1531540067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_55
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 20.5, y: 12.5}
+        - {x: 20.5, y: 52.5}
+        - {x: -17.5, y: 52.5}
+        - {x: -17.5, y: -7.5}
+        - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -33.5}
+        - {x: -28.5, y: -33.62036}
+        - {x: -28.5, y: -44.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 30.5, y: -44.5}
+        - {x: 30.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2a73307b277244a8cf9eb465ab8160
+      internalID: -1715438436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_56
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 525
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -28.5, y: -7.5}
+        - {x: -28.5, y: -46.5}
+        - {x: -17.5, y: -52.5}
+        - {x: 20.5, y: -52.5}
+        - {x: 29.5, y: -46.5}
+        - {x: 29.5, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c98e4f6112947438e9a8532f8e0554
+      internalID: 1222980166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e94d529a139d3e468e9addc1518356a
+      internalID: -1425918303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_58
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e2ea24a1ff0a44cb7712bd3b3ff56c
+      internalID: -317354111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_59
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d663fcd66bae91445a36bc9aad42418a
+      internalID: 1601361476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_60
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bff084a3a2418448db2c11ec7d1304
+      internalID: 424313410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_61
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be7247fe48acd049967d246465aff17
+      internalID: 825800173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_62
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fea767ca0850a41a22b4fa601d08b1
+      internalID: 1434737917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_63
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9dc5bf20b59cb4a8e7c5b14abd988b
+      internalID: 820712344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_64
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df83f1bfe6e51746b9acfbfa9386cbb
+      internalID: 222537546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_65
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57134ae08ea0d244b800ee0319dad12d
+      internalID: 1830612455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_66
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654afbf23b48855438d6727774fa4ee6
+      internalID: -1508229179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_67
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523f59e0b21116f47aabe55828cca580
+      internalID: -342142685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_68
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174a5f54572b1b74a832b6e0b0d94664
+      internalID: 1526835889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_69
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e2cb1a5eda9c14aa7a49a8351772ce
+      internalID: -1451370986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_70
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c52eee5849d37241928e0e12fc4c752
+      internalID: 821838562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_71
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 420
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f2c79da21df834faa626545849b00b
+      internalID: 703036819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_72
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 19.5, y: 52.5}
+        - {x: -9.5, y: 13.5}
+        - {x: -9.5, y: -40.5}
+        - {x: -0.5, y: -46.5}
+        - {x: 28.5, y: -49.5}
+        - {x: 52.5, y: -49.5}
+        - {x: 52.5, y: 52.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ab7a54666ffe5428742ad8164bc819
+      internalID: -181925539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_73
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -26.5, y: 52.5}
+        - {x: -52.5, y: 52.5}
+        - {x: -52.5, y: -49.5}
+        - {x: -38.5, y: -49.5}
+        - {x: -17.5, y: -48.5}
+        - {x: -12.5, y: -37.5}
+        - {x: -12.5, y: 2.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23efc1af0a11a640819fabf34559fcd
+      internalID: -2104331262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_74
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 13.5, y: 52.5}
+        - {x: -34.5, y: -0.5}
+        - {x: -34.5, y: -27.5}
+        - {x: -33.5, y: -31.5}
+        - {x: -6.5, y: -51.5}
+        - {x: 3.5, y: -52.5}
+        - {x: 52.5, y: -52.5}
+        - {x: 52.5, y: 52.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f79cc7a43855164f94525b45561dce9
+      internalID: 1004928150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_75
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: 52.5}
+        - {x: -52.5, y: -51.5}
+        - {x: -32.5, y: -51.5}
+        - {x: 31.5, y: -41.5}
+        - {x: 31.5, y: -19.5}
+        - {x: 1.5, y: 52.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc7762386a819c4f84b96bb6d135e5a
+      internalID: 2107052176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_76
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -24.5, y: -25.5}
+        - {x: -26.5, y: -41.5}
+        - {x: 0.5, y: -45.5}
+        - {x: -3.5, y: -26.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f98b2961e9889e4c88cd065f24ccfd7
+      internalID: 477035961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_77
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 47.5, y: 52.5}
+        - {x: 8.5, y: -12.5}
+        - {x: 6.5, y: -24.5}
+        - {x: 6.5, y: -37.5}
+        - {x: 19.5, y: -48.5}
+        - {x: 52.5, y: -48.5}
+        - {x: 52.5, y: 52.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771afb1f86541cb4a9153b15f5432e68
+      internalID: 646489126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_78
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -52.5, y: 52.5}
+        - {x: -52.5, y: -46.5}
+        - {x: -34.5, y: -50.5}
+        - {x: -3.5, y: -50.5}
+        - {x: -1.5, y: -47.5}
+        - {x: -1.5, y: -26.5}
+        - {x: -18.5, y: 52.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119658c3f21cd1c4cbbba43560d5f610
+      internalID: 1515623160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_79
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3760571e76e4ed42bf0aa1c81124e10
+      internalID: -1818586259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_80
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbc98529a148a5498db50fc5996d662
+      internalID: 1847839625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_81
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cb6b43f60a8f1408c4557721b32dc6
+      internalID: -150915833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_82
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc7ebd6ed8e35b4bbf23664c5815479
+      internalID: 508725610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_83
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95a5b91115fb1e4985e33f9e50702a0
+      internalID: -2146288855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_84
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 315
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e9b7334934a5d408bd06654b3611de
+      internalID: 465615037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_85
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e1cf2d92db04a4ea558dc3af89ebf3
+      internalID: 531627050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_86
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b980f6222477b845a9576011a47e127
+      internalID: 1192587470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_87
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938910b57862ad746a69b3cbc2732157
+      internalID: 490758144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_88
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc4ec6817b24fb4782361b46dec48e6
+      internalID: -1519373177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_89
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc00a092677f9742b860c3d30de8b0d
+      internalID: 2056377454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_90
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa3f6e309fe7fa44b06ac47d4ff3390
+      internalID: -6292801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_91
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85898db9ccc69c448828fdbd8aebc44f
+      internalID: -399599340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_92
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64a8a0cff6e64c4784712725f26f4aa
+      internalID: -1261508400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_93
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a556f67930e544a42a3194e9965157cc
+      internalID: -248595302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_94
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 210
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf2a324d596e97429b76640708efdc2
+      internalID: 1706045090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_95
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61992ea449fba80458f7d7101ffac9d6
+      internalID: 1097392554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_96
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b93c6d239af10946a1a92cf7a249704
+      internalID: 159798176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_97
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e93363b2803a042a271520f57f11c9
+      internalID: 1965120286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_98
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8acc2d4668b7434e9bec9bca83e0862
+      internalID: 69038149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_99
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ea779c30bca694c81f253f1399a67b
+      internalID: 1558735018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_100
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d8784286bcfbd40bc2cabc3ac86c2d
+      internalID: -560232226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_101
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4003349d87df38b48a7a57c923406556
+      internalID: 343834326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_102
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3f20a5e50095e419455770d38b9ba1
+      internalID: 421396654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_103
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa35902706a54684ab6c1556da6c026a
+      internalID: 857875533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_104
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecb9c8bbba94894b88eb2b869192154
+      internalID: -851424826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_105
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254be45666a98c04d998dd0cfb8e94a2
+      internalID: 2096952178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_106
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8e9128034ba6d4e88918ba13ac462c
+      internalID: -1260266100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_107
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb380444ca8e5e4cb1d64fea719e09e
+      internalID: -649309763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_108
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 105
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106ab152e146d984492c9c5d9de949a8
+      internalID: 84318046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_109
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9742c752301294ba3999a39b131254
+      internalID: -311192468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_110
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be1b5c08f605f449b33c58abe266ed7
+      internalID: 955967264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_111
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a046e6f172b6b3409439c0e98bf402f
+      internalID: -2125817885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_112
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8346ba55f9077404bad1b661d7e3ff64
+      internalID: -717817971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_113
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cea9d091ba1c764eb69c05ac4e89644
+      internalID: 437853754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_114
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5f7e5cc5f195e4898422d442a787c5
+      internalID: -2001790687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_115
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7b1369ba55c1f4d85013af17901b07
+      internalID: 612052833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_116
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903feed0accc98d4fbdd82cf35fc3cf1
+      internalID: -1042810417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_117
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c7d00ee45426741b3da580aee48d4f
+      internalID: 167772887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_118
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578be1b65246f194184a6628b56b1bc7
+      internalID: -1998602534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_119
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbebd0dd51460a9458e9a44d0bd6af07
+      internalID: -2033872289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_120
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68748c8920c61ec4d8701df82e0e3c2f
+      internalID: -729969153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_121
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02ab6c5454f7ce48a19c700c52ef41a
+      internalID: 1539324892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_122
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8ef21270b27604baa4e3ba3b514488
+      internalID: -88285445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CQ_Tileset_grasslands_123
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a883d0888edce6e4da023503cd622b66
+      internalID: -688279201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CQ_Tileset_grasslands_33: 1329365390
+      CQ_Tileset_grasslands_20: 1117395473
+      CQ_Tileset_grasslands_61: 825800173
+      CQ_Tileset_grasslands_71: 703036819
+      CQ_Tileset_grasslands_59: 1601361476
+      CQ_Tileset_grasslands_7: -1041535085
+      CQ_Tileset_grasslands_63: 820712344
+      CQ_Tileset_grasslands_112: -717817971
+      CQ_Tileset_grasslands_1: -2099741807
+      CQ_Tileset_grasslands_70: 821838562
+      CQ_Tileset_grasslands_51: 1276232203
+      CQ_Tileset_grasslands_79: -1818586259
+      CQ_Tileset_grasslands_82: 508725610
+      CQ_Tileset_grasslands_56: 1222980166
+      CQ_Tileset_grasslands_80: 1847839625
+      CQ_Tileset_grasslands_91: -399599340
+      CQ_Tileset_grasslands_87: 490758144
+      CQ_Tileset_grasslands_94: 1706045090
+      CQ_Tileset_grasslands_45: -847202120
+      CQ_Tileset_grasslands_95: 1097392554
+      CQ_Tileset_grasslands_74: 1004928150
+      CQ_Tileset_grasslands_5: -1616445100
+      CQ_Tileset_grasslands_92: -1261508400
+      CQ_Tileset_grasslands_52: 1276130890
+      CQ_Tileset_grasslands_81: -150915833
+      CQ_Tileset_grasslands_68: 1526835889
+      CQ_Tileset_grasslands_105: 2096952178
+      CQ_Tileset_grasslands_115: 612052833
+      CQ_Tileset_grasslands_77: 646489126
+      CQ_Tileset_grasslands_3: -485688218
+      CQ_Tileset_grasslands_58: -317354111
+      CQ_Tileset_grasslands_11: -457005874
+      CQ_Tileset_grasslands_15: -625733402
+      CQ_Tileset_grasslands_38: 463005600
+      CQ_Tileset_grasslands_119: -2033872289
+      CQ_Tileset_grasslands_107: -649309763
+      CQ_Tileset_grasslands_48: -826547048
+      CQ_Tileset_grasslands_27: -1561073582
+      CQ_Tileset_grasslands_66: -1508229179
+      CQ_Tileset_grasslands_73: -2104331262
+      CQ_Tileset_grasslands_83: -2146288855
+      CQ_Tileset_grasslands_17: 557273371
+      CQ_Tileset_grasslands_55: -1715438436
+      CQ_Tileset_grasslands_16: 1422136996
+      CQ_Tileset_grasslands_108: 84318046
+      CQ_Tileset_grasslands_32: -439847615
+      CQ_Tileset_grasslands_88: -1519373177
+      CQ_Tileset_grasslands_64: 222537546
+      CQ_Tileset_grasslands_29: 1933915488
+      CQ_Tileset_grasslands_78: 1515623160
+      CQ_Tileset_grasslands_116: -1042810417
+      CQ_Tileset_grasslands_2: 1338881534
+      CQ_Tileset_grasslands_84: 465615037
+      CQ_Tileset_grasslands_12: 783512730
+      CQ_Tileset_grasslands_0: 441260049
+      CQ_Tileset_grasslands_121: 1539324892
+      CQ_Tileset_grasslands_24: 1176021945
+      CQ_Tileset_grasslands_10: 1372437581
+      CQ_Tileset_grasslands_13: -1285155368
+      CQ_Tileset_grasslands_60: 424313410
+      CQ_Tileset_grasslands_14: 55110281
+      CQ_Tileset_grasslands_75: 2107052176
+      CQ_Tileset_grasslands_46: 136473844
+      CQ_Tileset_grasslands_85: 531627050
+      CQ_Tileset_grasslands_57: -1425918303
+      CQ_Tileset_grasslands_19: 1976320476
+      CQ_Tileset_grasslands_41: 955355984
+      CQ_Tileset_grasslands_26: -831071053
+      CQ_Tileset_grasslands_89: 2056377454
+      CQ_Tileset_grasslands_49: -1212410281
+      CQ_Tileset_grasslands_8: -1728186891
+      CQ_Tileset_grasslands_97: 1965120286
+      CQ_Tileset_grasslands_53: 973558508
+      CQ_Tileset_grasslands_69: -1451370986
+      CQ_Tileset_grasslands_118: -1998602534
+      CQ_Tileset_grasslands_103: 857875533
+      CQ_Tileset_grasslands_54: -1531540067
+      CQ_Tileset_grasslands_113: 437853754
+      CQ_Tileset_grasslands_120: -729969153
+      CQ_Tileset_grasslands_40: 1733610501
+      CQ_Tileset_grasslands_28: 617951387
+      CQ_Tileset_grasslands_96: 159798176
+      CQ_Tileset_grasslands_114: -2001790687
+      CQ_Tileset_grasslands_34: -30928893
+      CQ_Tileset_grasslands_21: 1105641674
+      CQ_Tileset_grasslands_65: 1830612455
+      CQ_Tileset_grasslands_86: 1192587470
+      CQ_Tileset_grasslands_104: -851424826
+      CQ_Tileset_grasslands_99: 1558735018
+      CQ_Tileset_grasslands_36: 1671345993
+      CQ_Tileset_grasslands_93: -248595302
+      CQ_Tileset_grasslands_31: 1707347007
+      CQ_Tileset_grasslands_106: -1260266100
+      CQ_Tileset_grasslands_50: -1766629054
+      CQ_Tileset_grasslands_62: 1434737917
+      CQ_Tileset_grasslands_101: 343834326
+      CQ_Tileset_grasslands_90: -6292801
+      CQ_Tileset_grasslands_25: 2134131324
+      CQ_Tileset_grasslands_111: -2125817885
+      CQ_Tileset_grasslands_6: 1014968296
+      CQ_Tileset_grasslands_9: -1768637895
+      CQ_Tileset_grasslands_76: 477035961
+      CQ_Tileset_grasslands_102: 421396654
+      CQ_Tileset_grasslands_18: 1573045080
+      CQ_Tileset_grasslands_23: -1277485839
+      CQ_Tileset_grasslands_47: -1413217625
+      CQ_Tileset_grasslands_35: -689903083
+      CQ_Tileset_grasslands_109: -311192468
+      CQ_Tileset_grasslands_98: 69038149
+      CQ_Tileset_grasslands_30: -2050343143
+      CQ_Tileset_grasslands_39: -250951749
+      CQ_Tileset_grasslands_67: -342142685
+      CQ_Tileset_grasslands_100: -560232226
+      CQ_Tileset_grasslands_44: 405044049
+      CQ_Tileset_grasslands_110: 955967264
+      CQ_Tileset_grasslands_22: 2067784403
+      CQ_Tileset_grasslands_122: -88285445
+      CQ_Tileset_grasslands_43: -1898856080
+      CQ_Tileset_grasslands_4: -1200817868
+      CQ_Tileset_grasslands_123: -688279201
+      CQ_Tileset_grasslands_72: -181925539
+      CQ_Tileset_grasslands_37: -583784483
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

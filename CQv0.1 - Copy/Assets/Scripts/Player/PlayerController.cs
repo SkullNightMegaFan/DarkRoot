@@ -17,27 +17,33 @@ public class PlayerController : MonoBehaviour
     public GunAttack gunAttack;
 
 
-
     Vector2 movementInput;
     Vector2 direction;
     SpriteRenderer spriteRenderer;
     ParticleSystem burrowParticleSystem;
     public Rigidbody2D rb;
+    CapsuleCollider2D collision;
     Animator animator;
     PlayerInventory playerInventory;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();  //create empty list that will store the ray cast collisions
-    bool canMove = true;
+    public bool canMove = true;
     public bool isInteracting = false;
     
     //dodgeroll variables.
     float dodgeCoolDownTime = 1.4f;
-    public float dodgeDuration = 5.0f;
-    public float dodgeForce = 10.0f;
-    private bool canDodge = true;
+    public float dodgeDuration = 0.3f;
+    public float dodgeForce = 1000.0f;
+    public bool canDodge = true;
+    public bool isTalking = false;
    
-
-    //might not need canShoot bool but you never know.  
-    private bool canShoot = true;
+   //gun variables
+   //this is a reminder but essentially
+   //the script gun attack has all the actual logic to shoot
+   //bullets and so forth. I should use that as a class and create seperate weapons for each object
+   //in the player script I should actually have these variables equal to the equipped gun that the player would read the data from.
+   //I don't have the time to figure out how to get this working. But after graduation, I might take a look. 
+   //this would take far longer than what time allows. So it's getting cancelled for the vertical slice. 
+    public bool canShoot = true;
     private float reloadTime = 1.0f;
     public int maxAmmo = 6;
     public int currentAmmo;
@@ -48,9 +54,12 @@ public class PlayerController : MonoBehaviour
     //burrowVariables
     public float burrowMeter;
     public float maxBurrowMeter = 3.0f;
-    public bool isBurrowing;// = false;
+    private float burrowConsumptionRate = 1.0f;
+    private float burrowRechargeRate = 0.5f;
+    public bool isBurrowing;
     public Vector2 introBurrowPoint;
     public Vector2 exitBurrowPoint;
+    public GameObject BurrowCollider;
     public GameObject IntroBurrow;
     public GameObject ExitBurrow;
     //ideally this should be a list that the player's code reads from
@@ -58,14 +67,16 @@ public class PlayerController : MonoBehaviour
     private GameObject burrowParticle;
     //debug not going to set canBurrow in full game
     
-    private bool canBurrow = true;
-    private bool canBurrowExit; // = false;
-
+    public bool canBurrow = true;
+    public bool canBurrowExit; 
+//These are references to the burrows the player can create. 
     private GameObject clone1;
     private GameObject clone2;
     void Start()
     {
+         
         rb = GetComponent<Rigidbody2D>();
+        collision = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerInventory = GetComponent<PlayerInventory>();
@@ -76,12 +87,11 @@ public class PlayerController : MonoBehaviour
         burrowParticleSystem = this.GetComponentInChildren<ParticleSystem>();
 
     }
-     void Update()
-    {
-       
-        
+    private void Update()
+    { 
         //this line of code prevents burrowmeter from surpassing maxBurrowMeter
         burrowMeter = Mathf.Clamp(burrowMeter, 0, maxBurrowMeter);
+
         //if movement input is not 0, try to move
         if (canMove) // check if movement has been turned off
         {
@@ -134,40 +144,51 @@ public class PlayerController : MonoBehaviour
             DodgeRoll();
         }
 
+        //the player will only be able to burrow when burrowMeter is free
+        //I'll add an update where this doesn't apply outside of battle, similar to 
+        //enter the gungeon. 
+        if (canBurrow || isTalking || isInteracting)
+        {
+            ///
+        }
+        else
+        {
+            canBurrow = !isBurrowing && Mathf.Approximately(burrowMeter, maxBurrowMeter);
+
+        }
 
 
         //if player can burrow and is inputting the burrow button, they will be able to burrow. 
-        if (canBurrow && Input.GetButton("Burrow"))
+        if (canBurrow && Input.GetButtonDown("Burrow"))
         {
-
-           // canBurrow = false;
-            
             Burrow();
-            // if (isBurrowing)
-            // {
-            //     BurrowExit();
-            // }
         }
-        if (Input.GetButton("Interact"))
+
+        if (isTalking)
         {
-
-            OnInteract();
+            Talking();
         }
-
-
+        else 
+        {
+            //StoppedTalking();            
+        }
          if (isBurrowing)
          {
            
               //player is invincible while burrowing.
-            spriteRenderer.color = Color.clear;            
+            spriteRenderer.color = Color.clear;    
+                    
             //later we need to change this so the player creates a dig effect based on 
             //on the floor beneath them. So if the player is in a snowy area, a snow type
             //burrow effect should appear, for now we can get away with just spawning in dirt
             //Instantiate()
 
-            burrowMeter -= 1 * Time.deltaTime;
+            //The rate that the burrow meter decreases,
+            burrowMeter -= burrowConsumptionRate* Time.deltaTime;
+            
            // StartCoroutine(MiniWait())
             canBurrowExit = true;
+            //isInvincible = true;
 
            
             
@@ -189,7 +210,7 @@ public class PlayerController : MonoBehaviour
          else 
          {
             //while player is not burrowing, they recharge their burrowMeter as time passes
-            burrowMeter += 1 * Time.deltaTime;
+            burrowMeter += burrowRechargeRate * Time.deltaTime;
             //burrowParticle.enabled = !burrowParticle.enabled;
            // burrowParticle.SetActive(false);
 
@@ -197,9 +218,6 @@ public class PlayerController : MonoBehaviour
          }
 
          //if the burrowMeter is more than zero, the player will be able to burrow
-      
-
-
 
 
         if (currentAmmo <= 0)
@@ -209,7 +227,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (currentAmmo > 0)
         {
-            canShoot = true;
+            //canShoot = true;
         }
 
 
@@ -237,20 +255,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //if the player presses the shoot button and can shoot
+//I tried getting the new input system to work so this line wouldn't be required but it just doesn't work
+//I was able to add events and bindings but i couldn't get them to pair with an action. Prob just need to watch more
+//unity tutorials but I just wasn't getting it. 
         if (canShoot && Input.GetMouseButtonDown(0))
         {
-            //OnFire();
             gunAttack.Attack();
+            OnGunAttack?.Invoke();
             currentAmmo--;
-            print("Shots Fired");
-           // canShoot == false;
-
-            //Trying to get the gun to fire when prerequisite conditions are fulfilled. 
         }
         else
         {
-            //return;
+            return;
         }
     
     }
@@ -345,16 +361,11 @@ void FinishReloading()
 
          currentAmmo += ammoToAdd;
              // Add the ammo and clamp it to the maximum capacity.
+    // Add the ammo and clamp it to the maximum capacity.
 
    //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
     }
 
-    // Add the ammo and clamp it to the maximum capacity.
-    // if (currentAmmo > maxAmmo)
-    // {
-    //     currentAmmo = maxAmmo;
-    // }
-  
 
     // Reset the reloading flag.
     isReloading = false;
@@ -366,7 +377,7 @@ void FinishReloading()
     {
         //what the dodge roll actually does
         //first calculate what direction the player is moving. 
-        
+        canBurrow = false;
         canDodge = false;
         isInvincible = true;
         rb.AddForce(movementInput * dodgeForce);
@@ -397,35 +408,29 @@ void FinishReloading()
 
         //Reset status to pre roll, this includes invinciblity and color change
         Debug.Log("Dodgeroll is finished");
+        canBurrow = true;
         canDodge = true;
         spriteRenderer.color = Color.white;
 
     }
  
-    void Burrow()
+    private void Burrow()
     {
+        collision.enabled = false;  //turns off Player's normal collider
+        BurrowCollider.SetActive(true);  // seperate collider that can only collide with impassable objects
+        movementFilter.layerMask  &= ~(1 << 3); movementFilter.layerMask &= ~(1 << 0);
+
+        moveSpeed = moveSpeed * 1.5f;
         canBurrow = false;
+        canDodge = false;
+        isInvincible = true;
         //starts the particle system when the player burrows
         burrowParticleSystem.Play();
-        /*player becomes invincible, 
-        //the player sprite becomes invisible
-        the point is able 
-        */
-        //first the player must destroy the previous burrow's
-        //Probably need to make an if statement if previous 
-        //burrow's exist. But let's get it working first.
-        Debug.Log("New Burrow is activated");
-
-        //destroy previous pairs of burrows
-        //burrow is no longer being created, the burrow is being created and then immediately destroyed? 
-        //put this in the clean up phase. 
 
         // if there are any intro or exit burrows
         // then destroy them 
         Destroy(clone1);
-        Destroy(clone2);
-        //Destroy(ExitBurrow.gameObject);
-        
+        Destroy(clone2);      
              
 
         //creating the intro burrow point
@@ -438,14 +443,20 @@ void FinishReloading()
         //toggle burrow
        //StartCoroutine()
 
-
-
     }
     //when player exits the burrow
     void BurrowExit()
     {
+        collision.enabled = true;  //turns on Player's normal collider
+        BurrowCollider.SetActive(false);
+        movementFilter.layerMask |= (1 << 0); movementFilter.layerMask |= (1 << 3);
+
+        moveSpeed = (moveSpeed / 1.5f);
         isBurrowing = false;
+        isInvincible = false;
+        canDodge = true;
         Debug.Log("Player has exited Burrow");
+        canBurrowExit = false;
         //update later
         //stops the particle system
         burrowParticleSystem.Stop();
@@ -454,14 +465,9 @@ void FinishReloading()
         spriteRenderer.color = Color.white;
 
            StartCoroutine(MiniWait());
-
-        
-        //canburrow is true if the player is not burrowing and burrow meter is above 0.
-        //need to create a new bool variable to have these two flags be true in order for canBurrow to be true 
-        canBurrow = true;
         
     }
-        void OnMelee()
+       public void OnMelee()
     {
         int count = rb.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions (direction trying to move)
@@ -483,7 +489,7 @@ void FinishReloading()
 
     }
 
-    void OnInteract()
+   public void OnInteract()
     {
         if (!isInteracting)
         {
@@ -510,11 +516,38 @@ void FinishReloading()
     }
     public void LockMovement()  //prevents the player from moving
     {
+        //Debug.Log("PlayerMovement has been locked");
         canMove = false;
     }
     public void UnlockMovement()  //allows the player to move again
     {
+        //Debug.Log("PlayerMovement has been lunocked");
+
         canMove = true;
+    }
+    public void Talking()
+    {
+        Debug.Log("Talking Activated");
+
+          canBurrow = false;
+            isInvincible = true;
+            canDodge = false;
+            canShoot = false;
+            canMove = false;
+            /////////////
+            isTalking = true;
+    }
+    public void StoppedTalking()
+    {
+        Debug.Log("Stopped talking has activated");
+           canBurrow = true;
+            isInvincible = false;
+            canDodge = true;
+            canShoot = true;
+            canMove = true;
+            isTalking = false;
+
+
     }
 }
     

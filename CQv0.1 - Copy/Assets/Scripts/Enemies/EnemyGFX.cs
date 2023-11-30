@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class EnemyGFX : MonoBehaviour
 {
-
+/*
     public AIPath aiPath;
 
     void Update()
@@ -18,4 +18,5 @@ public class EnemyGFX : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
+*/
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExitBurrow : MonoBehaviour
 {
+
+    public Vector2 otherPosition;
     // Start is called before the first frame update
      private void OnTriggerStay2D(Collider2D other)
     {
@@ -28,4 +30,18 @@ public class ExitBurrow : MonoBehaviour
 
         }
     }
+    public void OnTriggerEnter2D(Collider2D other)
+{
+    
+                 PlayerController playerController = other.GetComponent<PlayerController>();
+                 BulletBehaviour bulletBehaviour = other.GetComponent<BulletBehaviour>();
+
+        if (other.CompareTag("PlayerProjectiles"))
+        {
+            Debug.Log("Bullet has entered the burrow");
+            otherPosition = playerController.introBurrowPoint;
+            other.attachedRigidbody.position = otherPosition;
+           // other.attachedRigidbody.position = playerController.introBurrowPoint;
+        }
+}
 }
