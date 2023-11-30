@@ -6,6 +6,8 @@ Packages
 
 Every other folder can be deleted. It will be regenerated when you open the project on your set up. 
 The unity version for this project is 2021.3.17f1, do not under any circumstances change the unity version of the project. 
+https://unity.com/releases/editor/whats-new/2021.3.17
+Link to the webpage to download the version. ^^ Any version of Unity hub will work so don't worry about that. 
 All it does is create headache for the programmers. 
 
 Update: I just created a gitignore, it got annoying have to delete a gb and have the project reload every single time. If you want to add a 
