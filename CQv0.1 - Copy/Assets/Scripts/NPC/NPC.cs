@@ -32,7 +32,7 @@ public class NPC : MonoBehaviour
                 dialogueCanvas.SetActive(true);
                 
 
-                dialogueText.text = "Press E";
+                dialogueText.text = "Strange to see someone traveling alone these days....";
                 //post verticle slice i should just create a dialogue tree coroutine and go from there. 
                 //not sure how i would do that with the return values needed but if there's a will there's a way. 
                 StartCoroutine(MiniWait());
@@ -62,7 +62,7 @@ public class NPC : MonoBehaviour
         {
              //if (Input.GetKey(KeyCode.Space))
                           
-                dialogueText.text = "This is the second dialogue";
+                dialogueText.text = "Be safe on your travels.....vagabond.";
                 playerController.StoppedTalking();
                      
 
