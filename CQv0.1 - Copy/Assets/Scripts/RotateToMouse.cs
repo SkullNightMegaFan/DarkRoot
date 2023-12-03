@@ -8,9 +8,11 @@ public class RotateToMouse : MonoBehaviour
     public MouseBehaviour mouseBehaviour;
     Vector2 direction;
 
+    public int sortingOrder = 0;
+    private SpriteRenderer sprite;
     private void Start()
     {
-        
+        sprite = GetComponent<SpriteRenderer>();
     }
 
 
@@ -24,5 +26,13 @@ public class RotateToMouse : MonoBehaviour
 
         float angle = Vector2.SignedAngle(Vector2.down, direction);  // find angle between start position and mouse vector
         transform.eulerAngles = new Vector3(0, 0, angle);   // set the object�s Z rotation to the angle value
+
+        // some script to make gun below player when facing upwards ??
+        /*
+        if (direction.y > 0)
+        {
+            sprite.sortingOrder = -1;
+        }
+        */
     }
 }
