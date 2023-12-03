@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
    //I don't have the time to figure out how to get this working. But after graduation, I might take a look. 
    //this would take far longer than what time allows. So it's getting cancelled for the vertical slice. 
     public bool canShoot = true;
-    private float reloadTime = 0.35f;
+    private float reloadTime = 0.6f;
     public int maxAmmo = 6;
     public int currentAmmo;
     public bool isReloading = false;
@@ -325,7 +325,7 @@ void Reload()
     isReloading = true;
     //look into making a variable rest into it's initialized value. 
     //value needs to equal currently equipped gun, which it should read from equipped gun.
-    reloadTime = 0.35f;  // Reset the reload time.
+    reloadTime = 0.6f;  // Reset the reload time.
 
     // You can add visual and audio effects for reloading here.
 
@@ -351,7 +351,7 @@ void FinishReloading()
          currentAmmo += ammoToAdd;
          // Add the ammo and clamp it to the maximum capacity.
 
-        //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+        currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
         //Debug.Log()
     } 
     else //if (playerInventory.playerPistolAmmo =< maxAmmo)
@@ -362,8 +362,8 @@ void FinishReloading()
          currentAmmo += ammoToAdd;
              // Add the ammo and clamp it to the maximum capacity.
     // Add the ammo and clamp it to the maximum capacity.
-
-   //currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+//Do not delete this code, prevents current ammo from going above max ammo
+   currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
     }
 
 
