@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Inventory\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Player\IntroBurrow.cs" />
     <Compile Include="Assets\Scripts\Flocking\FlockerScript.cs" />
+    <Compile Include="Assets\RotateToPlayer.cs" />
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoParticle.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoProjectile.cs" />
@@ -114,7 +115,6 @@
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoAimer.cs" />
     <Compile Include="Assets\Scripts\Environment\RuneTrigger.cs" />
     <Compile Include="Assets\Art\2D Slash VFX\Demo\Code\DemoTarget.cs" />
-    <Compile Include="Assets\RotateToPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Fonts\black_chancery\BLACKCHA.TXT" />

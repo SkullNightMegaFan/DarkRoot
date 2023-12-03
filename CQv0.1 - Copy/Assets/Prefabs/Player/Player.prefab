@@ -5688,6 +5688,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6548551208087339855, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6878360135245287841, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -5753,6 +5757,10 @@ PrefabInstance:
     - target: {fileID: 5314433521719334783, guid: c9962ad83fdc6854392268440a8a953b, type: 3}
       propertyPath: m_Name
       value: Blue Slash v10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816860162022298270, guid: c9962ad83fdc6854392268440a8a953b, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9962ad83fdc6854392268440a8a953b, type: 3}
