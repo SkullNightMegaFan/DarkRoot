@@ -34,6 +34,13 @@
 			"runestoneName": "TutorialBurrowing",
 			"runeTitle": "Burrowing",
 			"runeText": "Hold 'SHIFT' to burrow, and release 'SHIFT' to stop burrowing. \n\n After making a burrow, press 'E' on one of your burrow points to quickly move through the burrow! \n\n Use burrowing to escape enemy attacks or to bypass obstacles. \n\n Try burrowing under the rocks bocking the path!"
+		
+		
+		},
+		{
+			"runestoneName": "TutorialReload",
+			"runeTitle": "Reloading",
+			"runeText": "Press R to reload your currently equipped weapon.\n\n You can only reload when you have less than the max Ammo.\n\n You can see how much ammo you currently have in the top right of the screen."
 		}
 	]
 }

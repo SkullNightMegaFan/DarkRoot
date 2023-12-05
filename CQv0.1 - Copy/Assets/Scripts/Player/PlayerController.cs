@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool isInteracting = false;
     
     //dodgeroll variables.
-    float dodgeCoolDownTime = 1.4f;
+    float dodgeCoolDownTime = 1.0f;
     public float dodgeDuration = 0.3f;
     public float dodgeForce = 1000.0f;
     public bool canDodge = true;
