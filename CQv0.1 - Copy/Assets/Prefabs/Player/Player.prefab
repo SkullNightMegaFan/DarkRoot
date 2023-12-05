@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAnchor: {fileID: 2642684378901896567}
   mouseBehaviour: {fileID: 0}
+  sortingOrder: 0
 --- !u!1 &7735058926997177188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,40 +5244,40 @@ MonoBehaviour:
   swordCollisionOffset: 0.05
   movementFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 1
+      m_Bits: 32777
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  swordAttack: {fileID: 0}
-  gunAttack: {fileID: 0}
+  swordAttack: {fileID: 3924501599083371771}
+  gunAttack: {fileID: 6855876787593558895}
   rb: {fileID: 0}
   canMove: 1
   isInteracting: 0
   dodgeDuration: 0.5
-  dodgeForce: 3000
+  dodgeForce: 2000
   canDodge: 1
   isTalking: 0
   canShoot: 1
   maxAmmo: 6
-  currentAmmo: 0
+  currentAmmo: 6
   isReloading: 0
   isInvincible: 0
-  burrowMeter: 5
+  burrowMeter: 0
   maxBurrowMeter: 3
   isBurrowing: 0
   introBurrowPoint: {x: 0, y: 0}
   exitBurrowPoint: {x: 0, y: 0}
   BurrowCollider: {fileID: 8450460053034493593}
-  IntroBurrow: {fileID: 0}
-  ExitBurrow: {fileID: 0}
+  IntroBurrow: {fileID: 8746475679872127716, guid: 5b4aec47e184987459bfa6fcf1584b71, type: 3}
+  ExitBurrow: {fileID: 4843515235836819369, guid: 546818087790adb468aa4534011bdb70, type: 3}
   canBurrow: 1
   canBurrowExit: 0
 --- !u!114 &-3381235161327335050
@@ -5620,6 +5621,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6308670321347535656, guid: 73f5645fa82d8044e939a526eda94bbf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73f5645fa82d8044e939a526eda94bbf, type: 3}
+--- !u!114 &3924501599083371771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3613240823500463510, guid: 73f5645fa82d8044e939a526eda94bbf, type: 3}
+  m_PrefabInstance: {fileID: 311432321146175853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ffc2b54225efb4a981f7e26009c500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7451839081447702450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7149515133967826655, guid: 73f5645fa82d8044e939a526eda94bbf, type: 3}
@@ -5690,7 +5702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6548551208087339855, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6878360135245287841, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
       propertyPath: m_Layer
@@ -5703,6 +5715,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6548551208087339848, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
   m_PrefabInstance: {fileID: 1142004955437033187}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6855876787593558895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5836032801531714956, guid: 045945f8134fe664baf1bef32782ab9e, type: 3}
+  m_PrefabInstance: {fileID: 1142004955437033187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e371c749615e04c9797cb9f47cf0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7360723681095780848
 PrefabInstance:
   m_ObjectHideFlags: 0
